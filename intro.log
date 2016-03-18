@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  18 MAR 2016 00:32
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  18 MAR 2016 16:36
 entering extended mode
  %&-line parsing enabled.
 **intro.tex
@@ -53,62 +53,137 @@ File: xkeyval.tex 2006/11/18 v2.5f key=value parser (HA)
 \c@fxwarningcount=\count90
 \c@fxerrorcount=\count91
 \c@fxfatalcount=\count92
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+(/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
+\Gread@gobject=\count93
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
 ) (./intro.aux)
 \openout1 = `intro.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-FiXme Note: 'or open/free' on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+(/usr/share/texmf/tex/context/base/supp-pdf.tex
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count94
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count95
+\nofMParguments=\count96
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen106
+\MPnumerator=\count98
+\everyMPtoPDFconversion=\toks17
+)
+FiXme Note: 'only available at local scale' on input line 18.
+FiXme Note: 'or open/free' on input line 20.
 
 
 LaTeX Warning: Citation `https://zephoria.com/top-15-valuable-facebook-statisti
-cs/' on page 1 undefined on input line 21.
+cs/' on page 1 undefined on input line 22.
 
+FiXme Note: 'cite{stock, ecology, election, tourists}' on input line 26.
+FiXme Note: 'cite{temperature, cloud, mountain peak}' on input line 27.
+FiXme Note: 'we choose snow and vegetation ...' on input line 30.
 
-LaTeX Warning: Reference `fig:' on page 1 undefined on input line 22.
+LaTeX Warning: Reference `fig:' on page 1 undefined on input line 33.
 
-FiXme Note: 'cite{stock, ecology, election, tourists}' on input line 25.
-FiXme Note: 'cite{temperature, cloud, mountain peak}' on input line 26.
-FiXme Note: 'we choose snow and vegetation ...' on input line 29.
-FiXme Note: 'cite{www}' on input line 34.
+FiXme Note: 'cite{www}' on input line 35.
+<figure/overview.png, id=1, 1133.23375pt x 430.60875pt>
+File: figure/overview.png Graphic file (type png)
 
-FiXme Summary: Number of notes: 5,
+<use figure/overview.png>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 46.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 46.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 46.
+ <image/citysnow.jpg, id=2, 154.176pt x 102.3825pt>
+File: image/citysnow.jpg Graphic file (type jpg)
+
+<use image/citysnow.jpg> <image/citysnow2.jpg, id=3, 481.8pt x 361.35pt>
+File: image/citysnow2.jpg Graphic file (type jpg)
+
+<use image/citysnow2.jpg> <image/dogsnow.jpg, id=4, 642.4pt x 428.60126pt>
+File: image/dogsnow.jpg Graphic file (type jpg)
+
+<use image/dogsnow.jpg> <image/humansnow.jpg, id=5, 642.4pt x 513.92pt>
+File: image/humansnow.jpg Graphic file (type jpg)
+
+<use image/humansnow.jpg>
+<image/intentiongreen.jpg, id=6, 642.4pt x 428.60126pt>
+File: image/intentiongreen.jpg Graphic file (type jpg)
+
+<use image/intentiongreen.jpg>
+<image/waterfallgreen.jpg, id=7, 427.5975pt x 642.4pt>
+File: image/waterfallgreen.jpg Graphic file (type jpg)
+
+<use image/waterfallgreen.jpg> <image/dogtree.jpg, id=8, 642.4pt x 642.4pt>
+File: image/dogtree.jpg Graphic file (type jpg)
+
+<use image/dogtree.jpg> <image/humantree.jpg, id=9, 256.96pt x 192.72pt>
+File: image/humantree.jpg Graphic file (type jpg)
+
+<use image/humantree.jpg>
+
+FiXme Summary: Number of notes: 6,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 0,
-(FiXme)        Total: 5.
+(FiXme)        Total: 6.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./intro.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figure/overview.png (PNG
+ copy)>] [2 <./image/citysnow.jpg> <./image/citysnow2.jpg> <./image/dogsnow.jpg
+> <./image/humansnow.jpg> <./image/intentiongreen.jpg> <./image/waterfallgreen.
+jpg> <./image/dogtree.jpg> <./image/humantree.jpg>] (./intro.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 908 strings out of 256214
- 12649 string characters out of 1917012
- 66057 words of memory out of 1500000
- 4256 multiletter control sequences out of 10000+200000
- 4847 words of font info for 18 fonts, out of 1200000 for 2000
+ 1589 strings out of 256214
+ 21703 string characters out of 1917012
+ 75291 words of memory out of 1500000
+ 4897 multiletter control sequences out of 10000+200000
+ 6670 words of font info for 24 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 35i,4n,60p,438b,126s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 35i,11n,60p,473b,419s stack positions out of 5000i,500n,6000p,200000b,15000s
 </usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/t
 ype1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb><
 /usr/share/texmf/fonts/type1/bluesky/cm/cmssbx10.pfb>
-Output written on intro.pdf (1 page, 29684 bytes).
+Output written on intro.pdf (2 pages, 1276586 bytes).
 PDF statistics:
- 22 PDF objects out of 1000 (max. 8388607)
+ 34 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
