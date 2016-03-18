@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+
+\usepackage{fixme}
+\fxsetup{ status=draft, layout=inline}
+
+\ExecuteOptions{letterpaper,10pt,twocolumn,oneside,final,journal}
+
+\begin{document}
+
+\section{Introduction}
+
+Monitoring the meteorology and vegetation phenomenon is the cornerstone and challenge of ecology and biology research. Expensive satellites images give large scale data but are struggled with cloud cover, 
+atmospheric conditions and ``micro'' object capturing such as flower species distribution, human interaction with nature.
+% and direct targeting of them, 
+% \cite{China tests anti-satellite weapon, unnerving U.S., Pentagon is confident missile hit satellite tank}
+% need new or more deficiency of satellites
+while citizen science provides high quality data but is also costly and is very difficult to practice in large scale area.
+The enormous popularity of photo-sharing website collects images in large spatial scale, from under the cloud and in close focus (compare to aerial surveillance), 
+moreover, they are open (\fxnote{or open/free}) to public.
+The more than 300 millions of images uploaded to social media every day
+\cite{https://zephoria.com/top-15-valuable-facebook-statistics/}
+ potentially contains not only human activities, but also outdoor ecology and biology information intentionally and incidentally as in \ref{fig:}.
+% !! extend
+
+The idea of reproduce satellite maps becomes more and more interesting to scientists applying textual mining on \fxnote{cite{stock, ecology, election, tourists}}, 
+and recently to computer vision researches directly deriving \fxnote{cite{temperature, cloud, mountain peak}} information from visual contents.
+In this paper, we test the feasibility of leveraging these noisy and biased images as a new approach to observe the nature. 
+% new source of monitoring ecology information
+\fxnote{we choose snow and vegetation ...}
+First, we collect a large labeled data set of the existence or absence of ecology phenomenon. 
+Then, we train a classifier for each phenomenon by combining its most discriminating visual features and by using deep learning features. 
+Finally, we collect 12 millions of images from entire North America over 2 years, make prediction on geo and temporal scale by aggregating these visual evidence.
+
+This paper is built on our earlier work \fxnote{cite{www}} analyzing ecology phenomenon from image tags only. We apply a new approach understanding visual contents, and run experiments on the exact same data set to study that how vision technique could help in social media data mining. Also, to our best knowledge, this is the first work providing continental scale quantitative performance evaluation.
+\end{document}
