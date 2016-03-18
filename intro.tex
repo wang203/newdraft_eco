@@ -20,23 +20,25 @@ The enormous popularity of photo-sharing website collects images in large spatia
 moreover, they are open (\fxnote{or open/free}) to public.
 The more than 300 millions of images uploaded to social media every day
 \cite{https://zephoria.com/top-15-valuable-facebook-statistics/}
- potentially contains not only human activities, but also outdoor ecology and biology information intentionally and incidentally as in Figure \ref{fig:flickrexp}.
+ potentially contains not only human activities, but also outdoor ecology and biology information intentionally and incidentally as shown in Figure \ref{fig:flickrexp}.
 % !! extend
 
 The idea of reproduce satellite maps becomes more and more interesting to scientists applying textual mining on \fxnote{cite{stock, ecology, election, tourists}}, 
 and recently to computer vision researches directly deriving \fxnote{cite{temperature, cloud, mountain peak}} information from visual contents.
-In this paper, we test the feasibility of leveraging these noisy and biased images as a new approach to observe the nature. 
+In this paper, we test the feasibility of leveraging these noisy and biased images as a new approach to observe the nature as in Figure \ref{fig:overview}. 
 % new source of monitoring ecology information
 \fxnote{we choose snow and vegetation ...}
 First, we collect a large hand-labeled data set of the existence or absence of ecology phenomenon. 
 Then, we train a classifier for each phenomenon by combining its most discriminative visual features and by using deep learning features. 
-Finally, we collect 12 millions of images from entire North America over 2 years, make prediction on geo and temporal scale by aggregating these visual evidence. Figure \ref{fig:} represents the overview of our approach.
+Finally, we collect 12 millions of images from entire North America over 2 years, make prediction on geo and temporal scale by aggregating these visual evidence.
 
 This paper is built on our earlier work \fxnote{cite{www}} analyzing ecology phenomenon from image tags only. We apply a new approach understanding visual contents of images, and run experiments on the exact same data set to study that how vision technique could help in social media data mining. Also, to our best knowledge, this is the first public image data mining work providing continental scale quantitative performance evaluation.
 
 
 \begin{figure*}[h]
 \includegraphics[scale=.3]{figure/overview.png}
+\caption{Overview of our approach to apply image classifiers on large scale images and make prediction by aggregating these visual evidence.}
+\label{fig:overview}
 \end{figure*}
 
 
