@@ -10,34 +10,33 @@
 
 \section{Introduction}
 
-Monitoring the meteorology and vegetation phenomenon is the cornerstone and challenge of ecology and biology research. Expensive satellites images give large scale data but are struggled with cloud cover, 
-atmospheric conditions and ``micro'' object capturing such as flower species distribution, human interaction with nature.
+Monitoring the meteorology and vegetation phenomenon is the cornerstone and challenge of ecology and biology research. Expensive satellite images give large scale data but struggle with cloud cover, 
+atmospheric conditions and fine-grained localization such as flower species distribution, human interaction with nature,
 % and direct targeting of them, 
 % \cite{China tests anti-satellite weapon, unnerving U.S., Pentagon is confident missile hit satellite tank}
 % need new or more deficiency of satellites
-while citizen science provides high quality data but is also costly and is very difficult to practice in large scale area. \fxnote{only available at local scale}
-The enormous popularity of photo-sharing website collects images in large spatial scale, from under the cloud and in close focus (compare to aerial surveillance), 
-moreover, they are open (\fxnote{or open/free}) to public.
-The more than 300 millions of images uploaded to social media every day
+while citizen science provides high quality data but is also costly and is very difficult to practice over large scale areas.
+The enormous popularity of photo-sharing website collects images in large spatial scale, from under clouds and in close focus (compare to aerial surveillance), 
+moreover, they are freely accessible to the public.
+The more than 300 million images uploaded to social media every day
 \cite{https://zephoria.com/top-15-valuable-facebook-statistics/}
- potentially contains not only human activities, but also outdoor ecology and biology information intentionally and incidentally as shown in Figure \ref{fig:flickrexp}.
+ potentially contain not only human activities, but also outdoor ecology and biology information intentionally and incidentally as shown in Figure \ref{fig:flickrexp}.
 % !! extend
 
-The idea of reproduce satellite maps becomes more and more interesting to scientists applying textual mining on \fxnote{cite{stock, ecology, election, tourists}}, 
-and recently to computer vision researches directly deriving \fxnote{cite{temperature, cloud, mountain peak}} information from visual contents.
-In this paper, we test the feasibility of leveraging these noisy and biased images as a new approach to observe the nature as in Figure \ref{fig:overview}. 
+The idea of reproducing satellite maps has become more and more interesting to scientists applying textual mining on \fxnote{cite{stock, ecology, election, tourists}}, 
+and recently to computer vision researches directly deriving \fxnote{cite{temperature, cloud, mountain peak}} information from visual content.
+In this paper, we test the feasibility of leveraging these noisy and biased images as a new approach to observe nature. We study 2 particular phenomena, snowfall and vegetation coverage as they are fundamental topic in ecology and biology study, have relatively distinct appearance to recognize, have a good chance to appear in social media, and also have satellite maps available to serve as ground truth. Our approach is illustrated in Figure \ref{fig:overview}. 
 % new source of monitoring ecology information
-\fxnote{we choose snow and vegetation ...}
-First, we collect a large hand-labeled data set of the existence or absence of ecology phenomenon. 
+First, we collect a large hand-labeled data set of the existence or absence of ecology phenomena. 
 Then, we train a classifier for each phenomenon by combining its most discriminative visual features and by using deep learning features. 
-Finally, we collect 12 millions of images from entire North America over 2 years, make prediction on geo and temporal scale by aggregating these visual evidence.
+Finally, we collect 12 million images from entire North America over 2 years, make prediction on geo and temporal scale by aggregating this visual evidence.
 
-This paper is built on our earlier work \fxnote{cite{www}} analyzing ecology phenomenon from image tags only. We apply a new approach understanding visual contents of images, and run experiments on the exact same data set to study that how vision technique could help in social media data mining. Also, to our best knowledge, this is the first public image data mining work providing continental scale quantitative performance evaluation.
+This paper is built on our earlier work \fxnote{cite{www}} analyzing ecology phenomenon from image tags only. We apply a new approach understanding visual content of images, and run experiments on the exact same data set to study how vision techniques could help in social media data mining compared to using textual data alone. Also, to our best knowledge, among all the research works performing social sensing with image data, this is the first one providing continental scale quantitative performance evaluation.
 
 
 \begin{figure*}[h]
 \includegraphics[scale=.3]{figure/overview.png}
-\caption{Overview of our approach to apply image classifiers on large scale images and make prediction by aggregating these visual evidence.}
+\caption{Overview of our approach to apply image classifiers on large scale images and make prediction by aggregating these visual evidence. \fxnote{first classifier, then prediction}}
 \label{fig:overview}
 \end{figure*}
 
