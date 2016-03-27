@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  25 MAR 2016 23:15
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  27 MAR 2016 17:37
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -101,10 +101,86 @@ LaTeX Font Info:    ... okay on input line 9.
 \MPscratchDim=\dimen106
 \MPnumerator=\count98
 \everyMPtoPDFconversion=\toks17
-)
-FiXme Note: 'a word for ``more and more popular''' on input line 10.
-FiXme Note: 'I just want to say easy.' on input line 16.
-FiXme Note: 'like vegetation case, satellite data miss data at almost all of th
-e transition period' on input line 23.
-FiXme Note: 'is this clear?' on input line 24.
-F
+) (./sectionintro.tex
+
+LaTeX Warning: Citation `https://zephoria.com/top-15-valuable-facebook-statisti
+cs/' on page 1 undefined on input line 12.
+
+FiXme Note: 'cite{stock, ecology, election, tourists}' on input line 16.
+FiXme Note: 'cite{temperature, cloud, mountain peak}' on input line 17.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+FiXme Note: 'cite{www}' on input line 24.
+
+<figure/overview.png, id=9, 1133.23375pt x 430.60875pt>
+File: figure/overview.png Graphic file (type png)
+
+<use figure/overview.png>
+FiXme Note: 'first classifier, then prediction' on input line 29.
+FiXme Note: 'first classifier, then prediction' on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 37.
+ <image/citysnow.jpg, id=10, 154.176pt x 102.3825pt>
+File: image/citysnow.jpg Graphic file (type jpg)
+
+<use image/citysnow.jpg> <image/citysnow2.jpg, id=11, 481.8pt x 361.35pt>
+File: image/citysnow2.jpg Graphic file (type jpg)
+
+<use image/citysnow2.jpg> <image/dogsnow.jpg, id=12, 642.4pt x 428.60126pt>
+File: image/dogsnow.jpg Graphic file (type jpg)
+
+<use image/dogsnow.jpg> <image/humansnow.jpg, id=13, 642.4pt x 513.92pt>
+File: image/humansnow.jpg Graphic file (type jpg)
+
+<use image/humansnow.jpg>
+<image/intentiongreen.jpg, id=14, 642.4pt x 428.60126pt>
+File: image/intentiongreen.jpg Graphic file (type jpg)
+
+<use image/intentiongreen.jpg>
+<image/waterfallgreen.jpg, id=15, 427.5975pt x 642.4pt>
+File: image/waterfallgreen.jpg Graphic file (type jpg)
+
+<use image/waterfallgreen.jpg> <image/dogtree.jpg, id=16, 642.4pt x 642.4pt>
+File: image/dogtree.jpg Graphic file (type jpg)
+
+<use image/dogtree.jpg> <image/humantree.jpg, id=17, 256.96pt x 192.72pt>
+File: image/humantree.jpg Graphic file (type jpg)
+
+<use image/humantree.jpg>)
+
+FiXme Summary: Number of notes: 5,
+(FiXme)        Number of warnings: 0,
+(FiXme)        Number of errors: 0,
+(FiXme)        Number of fatal errors: 0,
+(FiXme)        Total: 5.
+
+[2 <./figure/overview.png (PNG copy)> <./image/citysnow.jpg> <./image/citysnow2
+.jpg> <./image/dogsnow.jpg> <./image/humansnow.jpg> <./image/intentiongreen.jpg
+> <./image/waterfallgreen.jpg> <./image/dogtree.jpg> <./image/humantree.jpg>]
+(./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1592 strings out of 256214
+ 21748 string characters out of 1917012
+ 75299 words of memory out of 1500000
+ 4897 multiletter control sequences out of 10000+200000
+ 6670 words of font info for 24 fonts, out of 1200000 for 2000
+ 645 hyphenation exceptions out of 8191
+ 35i,11n,64p,571b,419s stack positions out of 5000i,500n,6000p,200000b,15000s
+</usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/t
+ype1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb><
+/usr/share/texmf/fonts/type1/bluesky/cm/cmssbx10.pfb>
+Output written on main.pdf (2 pages, 1277156 bytes).
+PDF statistics:
+ 34 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+

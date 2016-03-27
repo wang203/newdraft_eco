@@ -7,25 +7,31 @@
 \ExecuteOptions{letterpaper,10pt,twocolumn,oneside,final,journal}
 
 \begin{document}
-The \fxnote{a word for ``more and more popular''} social media websites 
+The more and more popular
+%\fxnote{a word for ``more and more popular''} 
+social media websites 
 collect a huge amount of latent visual information for environmental and ecology monitoring.
 In this work, we propose to reconstruct satellite maps of ecology status 
 across North America continent 
 through 12 million publicly available geo-temporal tagged images.
-We select snowfall and greenary vegetation coverage as important ecology phenomena with satellite 
-maps available to compare with, and straight forward \fxnote{I just want to say easy.} to identify by human. 
-First we examine the existance of snow and greenery respectively on all the images and 
+We select snowfall and green leaf vegetation coverage as important ecology phenomena with satellite 
+maps available to compare with.
+%, and straight forward \fxnote{I just want to say easy.} to identify by human. 
+First we examine the existence of snow and greenery respectively on all the images and 
 aggregate this result according to the geo and 
-temporal attributes to make continental scale prediction over each time period. 
-Then we compare our results with satellite maps for each phenomenon and find that we fill the blanket 
+temporal tags to make continental scale prediction over each time period. 
+Then we compare our results with satellite maps for each phenomenon and find that we fill the blanks 
 when satellites failed to get any data at very cloudy area or when satellite data is too 
-coarse to small changes \fxnote{like vegetation case, satellite data miss data at almost all of 
-the transition period}. In this case, our results are very helpful for ecologists especially when 
-the data during changing or transition period is all they need without a better way to find. \fxnote{is this clear?}
-We also conduct experiments with fixed time or location and find our result 
-as a promising complementary of satellite maps. Moreover, we also compare the performance based on visual evidence and textual mining. 
-It turns out tags can describe snowfall very well but due to \fxnote{misleading of words describing 
-vegetation}, it works less satisfactory on vegetation coverage estimation.
+coarse to small changes such as when green leaves turn yellow gradually.
+%\fxnote{like vegetation case, satellite data miss data at almost all of the transition period}. 
+%In this case, our results are very helpful for ecologists especially when 
+%the data during changing or transition period is all they need. \fxnote{is this clear?}
+We also conduct experiments by fixing time or location and find our results 
+as a promising complementary of satellite maps. Moreover, we also compare the performance based on visual evidence and textual tags. 
+It turns out tags can describe snowfall very well but due to 
+misleading of tags indicating greenery
+%\fxnote{misleading of words describing vegetation}
+, it works less satisfactory on vegetation coverage estimation.
 
 \input{sectionintro}
 %\input{sectionrelatedwork}
