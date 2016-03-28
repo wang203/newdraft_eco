@@ -2,41 +2,48 @@
 In last few years, crowd-sourcing data from social media 
 as a large scale and free to public data source
 has \fxnote{received lots of attention from; or (become more and more popular to)} 
-researchers working on 
-\fxnote{cite{old draft text mining, google doc, social event paper, 1 word for each paper, social 
-before natural}}. \fxnote{talk a lot about motivation of scientific report paper}.
-In \fxnote{cite{www}}, Zhang \etal estimates geo-temporal snowfall and vegetation coverage 
-based on Flickr image tags.
+researchers working on using textual contents to
+predict elections ~\cite{A Multifaceted Approach to Social Multimedia-based Prediction of Elections},
+using geo-tags to quantify
+tourism in nature area using geo-tag profile of social media users ~\cite{Using social media to quantify nature-based tourism and recreation},
+\fxnote{talk a lot about motivation of scientific report paper since it's in nature area}
+to draw coastline ~\cite{Can geo-tags on flickr draw coastlines?}, 
+using geo and temporal tags to analyze people's event-based activity when large group of people gathering together during a function of time such as football match,
+and using both geo and textual tags to 
+extract land use information from Panoramio ~\cite{Analysis of panoramio photo tags in order to extract land use information, Towards Better Land Cover Classification Using Geo-tagged Photographs},
+in \fxnote{cite{www}}, Zhang \etal estimates \fixme{missing letter in compiling} snowfall and vegetation coverage 
+based on geo, temporal and textual tags of Flickr images.
 \fxnote{accuracy of geo-temporal problem, and now it's getting better.}
 
-Since metadata of photos provides such a huge potential in social and environmental study, it's 
+Since public-sharing photos provides such a huge potential in social and environmental study, it's 
 natural to see a lot of works start analyzing image contents. Webcam providing dense temporal images 
-is a good source to monitor the nature. A series of works \fxnote{cite{webcam papers}} 
-describes outdoor scene \fxnote{cite{transattri}}, estimates \fxnote{cite{temp}} through sequences 
-of webcam images. 
-To evaluate the study of temperature and cloud, snowfall amount \fxnote{cite{snow on mountain peak}},
- researchers can easily compare their results with satellite data. Unfortunatelly, 
-the evaluation in these works are either not on continental scale or just via quality visualization.
-Social activity study on the other hand, is way more complex to evaluate the performance.
+is a good source to monitor the nature. A series of works explore sequences 
+of webcam images 
+describing outdoor scene with 40 transient attributes ~\cite{transattri}, estimating dynamic cloud maps ~\cite{building dynamic cloud maps from groud up, webcam2satellite}, exploring interactions between visual elements and the temperature \fxnote{or just as the title: exploring correlations between appearance and temperature} ~\cite{hot or not}, and monitoring the dynamic snow phenomena at mountain areas ~\cite{SnowWatch: Snow Monitoring through Acquisition and Analysis of User-Generated Content, Snow phenomena modeling through online public media}. 
+To evaluate the study of temperature, cloud, and snowfall amount,
+ researchers can easily compare their results with satellite maps. 
+Some works also use crowd-sourcing data from other sources, for example, Google street view provides selectively dense geo distributed images to help navigating the environment ~\cite{looking beyond the visible scene} and understanding urban scene and predicting urban perception ~\cite{predicting and understanding urban perception with cnn}, and Li \etal use the co-occurrence statistics of celebrities appears on news images to auto tag photographs of celebrity community ~\cite{celebritynet: a social network constructed from large scale online celebrity images}
+\fxnote{give a term like social identity?}. 
+Unfortunately, 
+the evaluation in these works are either not in continental scale or just via quality visualization.
+Performance of social activity studies, on the other hand, are even harder to evaluate.
+\fxnote{say more about our evaluation? or move this to another place?}
 
-Flickr and Panaramio \fxnote{check spell} as very popular photo-sharing websites , 
-``unintentionally'' \fxnote{check spell} supports researchers studies urban perception and 
-\fxnote{ cite{celebrity auto tag paper} and give a term like social identity?...} and \fxnote{cite{
-city attributes paper} and explain this is more important to people}. \fxnote{cite{look beyond} using 
-Google Street view}.
+Flickr and Panoramio as very popular photo-sharing websites 
+``involuntarily'' support researchers identifying salient city attributes and analyzing the visual similarity among different cities in order to apply computer vision to urban planning ~\cite{Recognizing city identity via attribute analysis of geo-tagged images}
+Photo-sharing websites collecting visual contents directly from people's activity and their surrounding areas which is so important, hard to collect otherwise but also very noisy. \fxnote{write something about so there are very few work appears and so we are working on this?}
 
-The fact \fxnote{foundamental loop hole} that webcam can only be placed far away from people 
- makes it almost impossible to monitor people`s activity, even not the surrounding area close to
-residencial or \fxnote{crowd? I mean groups of people like downtown, not ski activity but like people 
-going to work and back everyday also a good topic to use temporal dense images but webcam isn't good 
+The fact that webcam can only be placed far away from people 
+ makes it almost impossible to monitor people's activity, even not the surrounding area close to
+residential or \fxnote{crowd? I mean groups of people like downtown, not ski activity but like people 
+going to work and back everyday also a good topic to use temporal dense images but Webcam is not good 
 at this.} Social media, on the other hand, provides a larger freedom on location distribution. 
-In fact, as a complementory, almost all the photos shared online are from locations people usually go to. 
+In fact, as a complementary, almost all the photos shared online are from locations people usually go to. 
 \fxnote{how helpful is this to study more areas close to urban planning, market sharing, everyday living,
 anything related to people}
 
-Our work take the advantage of studying ecology phenomena with \fxnote{easy to get, more reliable
- ground truth} and use social media data to \fxnote{monitor? insight?} these information from \fxnote{
-locations more related to people}. We provide continental scale quatetive evaluation and introduce our
- method to tackle the problem of noisy and biased data, in order to support extended studies about 
-more areas. \fxnote{change this sentence..}
+Our work take the advantage of studying ecology phenomena with \fxnote{easy to get, more reliable} satellite maps as
+ ground truth and use social media data to \fxnote{monitor? insight?} these information from \fxnote{
+locations more related to people}. We provide continental scale quantitative evaluation and introduce our
+ method to tackle the problem of noisy and biased data, in order to support extended studies in other areas. \fxnote{just want to say more areas in natural or not only natural but also social}
 
