@@ -26,7 +26,7 @@ We now turn to present experimental resutls for estimating geo-temporal distribu
 
 \subsubsection{Snow Prediction on Cities}
 To compare with existing results in \fxnote{cite{workshop}} using tag based method,
-we first test how well our image-content based method can predict snowfall at a local scale, 
+we first test how well our image-content based method can predict snowfall on daily base at a local scale, 
 and in particular 
 for the same four U.S. metropolitan areas, New York City, Boston, Chicago and Philadelphia. 
 Table~\ref{tab:city_conf_tag_vision} 
@@ -45,17 +45,22 @@ in the following experiments.
 \subsubsection{Continental-scale Snow Prediction}
 Adding visual evidence, we reconstruct Satellite maps and 
 evaluate our model in continental scale. We follow the same metric in \fxnote{cite{www}} to produce 
-estimation at resolution of $1 \times 1$ degree (roughly $100 \times 100 km^2$) square.
+estimation at resolution of $1 \times 1$ degree (roughly $100 \times 100 km^2$) square and 1 map for 
+every day in 2009 and 2010.
 
-
+Figure ~\ref{fig:snowcurve} shows the precision and recall curve of snow prediction in 
+continental-scale.
+Here we limit our predictions for the bins which have photos taken at that 
+time and location, we do this by keeping the bins have ground truth and photos at the same time. 
+We computed our confidence scores based on tags and image-classification, then we trained 
+simple decision tree to learn the correct thresholds to make final prediction. We achieve 
+almost 0.5\% over the baseline (cutting the error rate by more than 20\%), the baseline in 
+our case is the majority class which predicts now snow all the time. 
 
 
 
 \begin{table}\centering
-\ra{1.3}
-\caption{\textbf{Performance of 
-different features for snow detection using SVMs for classification \fxnote{cite{workshop}} and compared 
-with CNN model.}
+\caption{\textbf{Performance of different features for snow detection using SVMs for classification and compared with CNN model.}}
 \label{tab:snow}
 \begin{tabular}{@{}lcr@{}}\toprule
 Feature & Kernel & Accuracy\\\midrule
@@ -76,8 +81,8 @@ CNN& -& \textbf{88.06\%}\\
 \begin{center}
 \vspace{-16pt}
 \begin{tabular}{cc}
- \includegraphics[width=0.4\textwidth]{figs/ROC-CNN-curves.jpg} &
-\includegraphics[width=0.4\textwidth]{figs/PR-CNN-curves.jpg} \\
+ \includegraphics[width=0.4\textwidth]{figure/ROC-CNN-curves.jpg} &
+\includegraphics[width=0.4\textwidth]{figure/PR-CNN-curves.jpg} \\
 \end{tabular}
 \end{center}
 \vspace{-8pt}
@@ -90,16 +95,28 @@ Snow classification results for different features and combinations, in terms of
 
 
 \begin{table*}\centering
-\ra{1.3}
 \caption {\textbf{Selected basic statistics during 2007 to 2010 for the 4 cities and results of the likelihood model using tags and vision evidence.}}
 \label{tab:city_conf_tag_vision} 
 \begin{tabular}{@{}crrrrrr@{}}\toprule
 City &  baseline & active user/day  & snow days &  tag confidence &  vision conf & tags conf and vision conf \\\midrule
-{NYC} & 85\% & 65.6 & 185 &90.4241\%&90.2873\% &92.3393\%\\
-{Chicago} &72.80\% & 94.9 & 418 &94.1176\% &93.1601\% &95.0752\%  \\
-{Boston} & 75.60\%& 59.7 & 373 &89.1781\%&85.2055\% & 91.2329\% \\
-{Philly} & 80.50\% & 43.7 & 280 & 89.1929\% &85.0889\% & 89.1929\%  \\
+{NYC} & 85.00\% & 65.6 & 185 &90.42\%&90.29\% &92.34\%\\
+{Chicago} &72.80\% & 94.9 & 418 &94.12\% &93.16\% &95.08\%  \\
+{Boston} & 75.60\%& 59.7 & 373 &89.18\%&85.21\% & 91.23\% \\
+{Philly} & 80.50\% & 43.7 & 280 & 89.19\% &85.09\% & 89.19\%  \\
 \bottomrule
 \end{tabular}
 \vspace{-12pt}
 \end{table*}
+
+\begin{figure*}
+%{\small{
+\begin{center}
+\includegraphics[width=0.40\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-snow.jpg}
+\includegraphics[width=0.40\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-nonsnow.jpg}
+\end{center}
+%}}
+\vspace{-12pt}
+\caption{Precision and recall curve of snow prediction (left) and nonsnow (right) in continental scale.}
+\label{fig:snowcurve}
+\vspace{-12pt}
+\end{figure*}
