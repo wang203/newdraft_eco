@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  28 MAR 2016 16:05
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  3 APR 2016 12:32
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -290,22 +290,14 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
 LaTeX Warning: Citation `https://zephoria.com/top-15-valuable-facebook-statisti
 cs/' on page \thepage  undefined on input line 12.
 
-
-LaTeX Warning: Reference `fig:flickrexp' on page \thepage  undefined on input l
-ine 13.
-
 LaTeX Font Info:    Try loading font information for T1+aess on input line 16.
 (/usr/share/texmf/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
 FiXme Note: 'cite{stock, ecology, election, tourists}' on input line 16.
 FiXme Note: 'cite{temperature, cloud, mountain peak}' on input line 17.
-
-
-LaTeX Warning: Reference `fig:overview' on page \thepage  undefined on input li
-ne 18.
-
 FiXme Note: 'cite{www}' on input line 24.
+
 <figure/overview.png, id=1, 1133.23375pt x 430.60875pt>
 File: figure/overview.png Graphic file (type png)
 
@@ -457,43 +449,87 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 2.jpg> <./image/dogsnow.jpg> <./image/humansnow.jpg> <./image/intentiongreen.jp
 g> <./image/waterfallgreen.jpg> <./image/dogtree.jpg> <./image/humantree.jpg>])
 
+(./sectionmethod.tex
+FiXme Note: 'cite{www}' on input line 12.
+FiXme Note: 'cite{workshop}' on input line 16.
+FiXme Note: 'section 3.3' on input line 23.
+FiXme Note: 'cite{www}' on input line 25.
+FiXme Note: 'cite{workshop}' on input line 31.
+FiXme Note: 'cite{SIFT}' on input line 38.
+FiXme Note: 'From now on to the end of this paragraph, it's the same as our wor
+kshop paper. Could you help me to give a shorter global description?' on input 
+line 54.
+FiXme Note: 'cite{oliva2001modeling}' on input line 57.
+FiXme Note: 'cite{douze2009evaluation}' on input line 60.
+
+Overfull \hbox (8.19742pt too wide) in paragraph at lines 51--61
+\T1/aer/bx/n/9 liva2001modeling[]\T1/aer/m/n/9 . Our vari-ant pro-duces a 1536-
+dimensional
+ []
+
+
+Overfull \hbox (44.24675pt too wide) in paragraph at lines 51--61
+\T1/aer/m/n/9 fi-ca-tion re-sults sig-nif-i-cantly \T1/aess/bx/n/9 FiXme \T1/ae
+r/bx/n/9 Note: cite-douze2009evaluation[]\T1/aer/m/n/9 . 
+ []
+
+FiXme Note: 'cite{krizhevsky2012imagenet} ' on input line 66.
+FiXme Note: 'cite{ilsvrcarxiv14}' on input line 69.
+FiXme Note: 'cite{Oquab14}' on input line 89.
+
+Overfull \hbox (1.22186pt too wide) in paragraph at lines 92--92
+[]\secfnt Aggregating Vi-sual Ev-i-dence Across Users 
+ []
+
+[3]
+FiXme Note: 'cite{www}' on input line 107.
+
+Overfull \hbox (13.43137pt too wide) in paragraph at lines 107--119
+[]\T1/aer/m/n/9 We adopt the like-li-hood model from \T1/aess/bx/n/9 FiXme \T1/
+aer/bx/n/9 Note: citewww[]\T1/aer/m/n/9 ,
+ []
+
+FiXme Note: 'cite{www}' on input line 120.
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 126.
+
+)
 No file main.bbl.
 
-FiXme Summary: Number of notes: 20,
+FiXme Summary: Number of notes: 34,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 1,
-(FiXme)        Total: 21.
+(FiXme)        Total: 35.
 
-[3
+[4
 
-] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3135 strings out of 256214
- 39314 string characters out of 1917012
- 101833 words of memory out of 1500000
- 6323 multiletter control sequences out of 10000+200000
- 55710 words of font info for 80 fonts, out of 1200000 for 2000
+ 3145 strings out of 256214
+ 39420 string characters out of 1917012
+ 101855 words of memory out of 1500000
+ 6327 multiletter control sequences out of 10000+200000
+ 59001 words of font info for 83 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  39i,11n,63p,885b,436s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/b
-luesky/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr6.pfb></usr/sha
-re/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/bluesky/
-cm/cmr9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmssbx10.pfb></usr/share/t
-exmf/fonts/type1/bluesky/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/
-cmti9.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/tex
-mf/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utm
-r8a.pfb>
-Output written on main.pdf (3 pages, 1329960 bytes).
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf
+/fonts/type1/bluesky/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx
+ti10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/f
+onts/type1/bluesky/cm/cmmi9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr6.p
+fb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/ty
+pe1/bluesky/cm/cmr9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmssbx10.pfb><
+/usr/share/texmf/fonts/type1/bluesky/cm/cmsy7.pfb></usr/share/texmf/fonts/type1
+/bluesky/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti9.pfb></usr/
+share/texmf/fonts/type1/public/cmex/fmex9.pfb></usr/share/texmf/fonts/type1/urw
+/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/s
+hare/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on main.pdf (4 pages, 1375748 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

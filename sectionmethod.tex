@@ -1,0 +1,141 @@
+\section{method}
+
+\subsection{Overview}
+In this paper, we propose an effective system to estimate the presence or absence 
+of a given ecology phenomenon (like green leaf plants) 
+from visual contents of public-shared photographs. First, we employ the state-of-the-art 
+computer vision technique to detect the target phenomenon. Then according to the visual evidence 
+and the corresponding timestamp and geo-tag of each image, we use a likelihood model 
+aggregating the large scale, imperfect information to reconstruct the satellite maps.
+
+We collect 12 millions photos shared on Flickr during 2007 and 2010 with geo-tags and timestamp available, 
+in North America continent similar to \fxnote{cite{www}}, and split them into a training set $D_1$ for prior knowledge 
+learning with photos taken in 2007 and 2008, and a testing set $D_2$ with photos taken in 2009 and 2010.
+In the two steps of training stage, for snowfall and greenery respectively, we first 
+prepare a hand-labeled dataset similar to 
+\fxnote{cite{workshop}} sampled from photos taken 
+before 2009, no matter it has geo or temporal 
+information or not. Half of the photos must have tags indicating snow or greenery presenting 
+in the image as positive samples, and the other half are random negtive samples. 
+We learn a scene classification model from this hand-labeled dataset for each target phenomenon. By  
+applying this model to the continental scale dataset $D_1$, in the second step 
+of training, we learn the parameters for the likelihood model introducing later 
+in \fxnote{section 3.3} to 
+make estimation for each pixel on our result map. We then test the entire system with the separate continental 
+scale dataset $D_2$ and compare the results with satellite maps described in \fxnote{cite{www}} as ground 
+truth for evaluation.
+
+\subsection{Scene Classification}
+\subsubsection{Combining Visual Features}
+To train a scene classification model for snow scene and greenery scene respectively, we start with 
+combining the most descriminative image features. Similar to snow scene recognition in \fxnote{cite{workshop}}, 
+vegetation has the signature green color that the  
+biologists are very interested in during exactly which time period they are green. 
+Thus it's very important 
+to find out when it turns from yellow to green and when does it turns back to yellow.
+The leaves of plants also have distinctive visual texture. 
+Thus, visual features capture both color and texture information are our best choice.
+So we employ color SIFT feature \fxnote{cite{SIFT}} to analyze the local gradient distribution. 
+And we also extract color GIST feature to describe texture feature and global context. 
+
+\xhdr{Color SIFT histogram.}
+We extract dense SIFT feature on each of the RGB color plane, and concatenate them to 
+build color SIFT feature. The dense SIFT feature is extracted from every 2 pixels by 2 pixels bin, 
+with a step size of 5 pixels. In this way, we achieve representative key points and reasonable 
+computation complex. 
+
+From training data set, We build 2000 dimensional centers of color SIFT feature 
+using K-means clustering. With these centers, a 2000 dimensional histogram is built 
+from all the key points of each image.
+
+\xhdr{Color GIST.} Similarly, we also extract GIST features on RGB color channel respectively.
+\fxnote{From now on to the end of this paragraph, 
+it's the same as our workshop paper. Could you help me to give a shorter global
+description?}
+GIST feature capture coarse texture
+and scene layout by applying a Gabor filter bank followed by
+down-sampling \fxnote{cite{oliva2001modeling}}. Our variant produces a
+1536-dimensional vector and operates on color planes. Scaling
+images to have square aspect ratios before computing GIST improved
+classification results significantly \fxnote{cite{douze2009evaluation}}.
+
+By concatenating color SIFT histogram and color GIST feature, 
+a model is trained and tested with SVM using RBF kernel.
+
+\subsubsection{Deep learning}
+Recently the Conventional Neural Network (CNN) \fxnote{cite{krizhevsky2012imagenet} }
+has gained a lot of attention 
+in the vision community, as it outperformed all other techniques in the ImageNet challenge 
+(the most famous object category detection competition) \fxnote{cite{ilsvrcarxiv14}}.
+
+CNN is currently the state-of-the-art algorithm of image classification on standard datasets.
+CNN enjoys additional features that distinguish it from the standard neural networks: 
+shared weights and sparse connectivity.
+A layer in CNN may consist of three different stages: 
+convolution, non-linear activation, and pooling.
+In the convolution stage, a set of convolution filters is applied in parallel. 
+The output of a convolution filter is then passed to non-linear activation functions 
+(e.g., rectified linear activation function, sigmoid activation function).
+The final stage is pooling, where the net output is manipulated based on its neighbors 
+(e.g., max pooling, $L_2$ norm, and weighted average).
+Pooling makes the network invariant to the translation of the input
+
+The key idea behind this approach is that instead of first designing low-level features by
+hand and then running a machine learning algorithm, a single unified
+algorithm should learn both the low-level features and the
+high-classifier simultaneously. 
+
+We apply CNN to detect snow and vegetation on image level. 
+We followed \fxnote{cite{Oquab14}} and started with a model pre-trained on the huge 
+ImageNet dataset then we train our models using hand-labeled data sets.
+
+\subsection{Aggregating Visual Evidence Across Users}
+After image classification, we could have simply count how many photos have evidence of snowfall 
+or greenery in the content taken in a given time period at a given place. But, in fact, while we are 
+enjoying millions of free and public images on social media websites, we are facing the following problems 
+at the same time. The photographers upload these images completely for their own social and personal purposes. 
+They may upload a large batch of images without any evidence of our target scene, for example, 
+on a snow 
+day, people can still upload hundreds of indoor photos or close up photos of their dogs or kids or plants 
+in their cleaned backyard. 
+Or simply due to device setting of the camera or smartphone, and sometimes limitd GPS accuracy of the photographing 
+device and satellite, it's possible 
+to have a photographer uploading a large number of images with incorrect timestamp or geo-tag.
+In this case, which is likely to see on social media websites, we count the visual evidence 
+by users instead of by images.
+
+We adopt the likelihood model from \fxnote{cite{www}}, by applying the scene classification model 
+to the training dataset $D_1$, we figure out for each location during each time period which image
+is 
+capturing the target scene (snowfall or greenery) and which is not. For the remaining description, 
+we use snowfall as our target scene as an example. First, by combining the 
+user profile of each image, we count the number of users denoting in $m$ providing evidence of 
+snowfall (event $u$), and 
+the number of users denoting in $n$ uploading photos without snowfall (event $\bar{u}$). We learn a 
+fixed probability of when satellite map shows it's a snow day at a given location, we see a photographer 
+uploading images contain snowfall $p = P(u|snow)$, similarly, $q = P(u|\bar{snow})$ denotes the 
+probability of when we find a photographer sharing images with snowfall but 
+satellite map shows it's not snowing at that time and location.
+
+According to \fxnote{cite{www}},
+\newcommand{\smsn}{s^m, \bar{s}^n}
+\newcommand{\smsntwo}{s^m, \bar{s}^n}
+
+\begin{eqnarray*}
+P(snow|\smsn) &=&\frac{ P(\smsn|snow)P(snow)}{P(\smsntwo)} \\
+&=&\frac{{m+n\choose m}p^{m}(1-p)^{n}P(snow)}{P(\smsntwo)}, 
+\end{eqnarray*}
+
+\begin{eqnarray*}
+P(\overline{snow}|\smsn) &=&\frac{{m+n\choose m}q^{m}(1-q)^{n}P(\overline{snow})}{P(\smsntwo)}, 
+\end{eqnarray*}
+
+\begin{eqnarray}
+\frac{P(snow|\smsn)}{P(\overline{snow}|\smsntwo)}
+&=&\frac{P(snow)}{P(\overline{snow})}\left(\frac{p}{q}\right)^{m}\left(\frac{1-p}{1-q}\right)^n.
+\label{eq:conf}
+\end{eqnarray}
+
+
+
+
