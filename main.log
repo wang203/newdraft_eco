@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  3 APR 2016 12:32
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  3 APR 2016 14:59
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -484,16 +484,16 @@ Overfull \hbox (1.22186pt too wide) in paragraph at lines 92--92
 [3]
 FiXme Note: 'cite{www}' on input line 107.
 
-Overfull \hbox (13.43137pt too wide) in paragraph at lines 107--119
+Overfull \hbox (13.43137pt too wide) in paragraph at lines 107--123
 []\T1/aer/m/n/9 We adopt the like-li-hood model from \T1/aess/bx/n/9 FiXme \T1/
 aer/bx/n/9 Note: citewww[]\T1/aer/m/n/9 ,
  []
 
-FiXme Note: 'cite{www}' on input line 120.
+FiXme Note: 'cite{www}' on input line 124.
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 126.
+(amsmath)                 on input line 134.
 
 )
 No file main.bbl.
@@ -527,7 +527,7 @@ share/texmf/fonts/type1/public/cmex/fmex9.pfb></usr/share/texmf/fonts/type1/urw
 /helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/s
 hare/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on main.pdf (4 pages, 1375748 bytes).
+Output written on main.pdf (4 pages, 1376634 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)

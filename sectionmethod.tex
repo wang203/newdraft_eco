@@ -8,7 +8,7 @@ computer vision technique to detect the target phenomenon. Then according to the
 and the corresponding timestamp and geo-tag of each image, we use a likelihood model 
 aggregating the large scale, imperfect information to reconstruct the satellite maps.
 
-We collect 12 millions photos shared on Flickr during 2007 and 2010 with geo-tags and timestamp available, 
+We collect 12 million photos shared on Flickr during 2007 and 2010 with geo-tags and timestamp available, 
 in North America continent similar to \fxnote{cite{www}}, and split them into a training set $D_1$ for prior knowledge 
 learning with photos taken in 2007 and 2008, and a testing set $D_2$ with photos taken in 2009 and 2010.
 In the two steps of training stage, for snowfall and greenery respectively, we first 
@@ -16,7 +16,7 @@ prepare a hand-labeled dataset similar to
 \fxnote{cite{workshop}} sampled from photos taken 
 before 2009, no matter it has geo or temporal 
 information or not. Half of the photos must have tags indicating snow or greenery presenting 
-in the image as positive samples, and the other half are random negtive samples. 
+in the image as positive samples, and the other half are random negative samples. 
 We learn a scene classification model from this hand-labeled dataset for each target phenomenon. By  
 applying this model to the continental scale dataset $D_1$, in the second step 
 of training, we learn the parameters for the likelihood model introducing later 
@@ -28,7 +28,7 @@ truth for evaluation.
 \subsection{Scene Classification}
 \subsubsection{Combining Visual Features}
 To train a scene classification model for snow scene and greenery scene respectively, we start with 
-combining the most descriminative image features. Similar to snow scene recognition in \fxnote{cite{workshop}}, 
+combining the most discriminative image features. Similar to snow scene recognition in \fxnote{cite{workshop}}, 
 vegetation has the signature green color that the  
 biologists are very interested in during exactly which time period they are green. 
 Thus it's very important 
@@ -98,7 +98,7 @@ They may upload a large batch of images without any evidence of our target scene
 on a snow 
 day, people can still upload hundreds of indoor photos or close up photos of their dogs or kids or plants 
 in their cleaned backyard. 
-Or simply due to device setting of the camera or smartphone, and sometimes limitd GPS accuracy of the photographing 
+Or simply due to device setting of the camera or smartphone, and sometimes limited GPS accuracy of the photographing 
 device and satellite, it's possible 
 to have a photographer uploading a large number of images with incorrect timestamp or geo-tag.
 In this case, which is likely to see on social media websites, we count the visual evidence 
@@ -112,30 +112,44 @@ we use snowfall as our target scene as an example. First, by combining the
 user profile of each image, we count the number of users denoting in $m$ providing evidence of 
 snowfall (event $u$), and 
 the number of users denoting in $n$ uploading photos without snowfall (event $\bar{u}$). We learn a 
-fixed probability of when satellite map shows it's a snow day at a given location, we see a photographer 
-uploading images contain snowfall $p = P(u|snow)$, similarly, $q = P(u|\bar{snow})$ denotes the 
-probability of when we find a photographer sharing images with snowfall but 
-satellite map shows it's not snowing at that time and location.
+fixed probability of when satellite map shows it's a snow day at a given location, we see a 
+photographer 
+uploading images contain snowfall $p = P(u|snow)$. Similarly, $q = P(s | \overline{snow})$ denotes 
+the 
+probability of when we find a photographer sharing images with snowfall evidence but 
+satellite map shows it's not snowing at that time and location. We assume $q$ is a non-zero probability 
+due to misleading visual contents (photos with very bright wall or a small chance of false positive 
+result from scene classification), and inaccurate geo and temporal tags.
 
-According to \fxnote{cite{www}},
+According to \fxnote{cite{www}}, assuming users are taking photos independently, 
+given all observers (photographers) spotting snow 
+or non-snow, we have the posterior probability of snowfall presence at each time and location:
+%
+%
 \newcommand{\smsn}{s^m, \bar{s}^n}
 \newcommand{\smsntwo}{s^m, \bar{s}^n}
-
+%
 \begin{eqnarray*}
 P(snow|\smsn) &=&\frac{ P(\smsn|snow)P(snow)}{P(\smsntwo)} \\
 &=&\frac{{m+n\choose m}p^{m}(1-p)^{n}P(snow)}{P(\smsntwo)}, 
 \end{eqnarray*}
-
+%
+where we use $P(snow)$ as a general prior probability describing in entire North America, 
+the chance to see a snow day at 
+any time of a year. So we can also derive the similar posterior probability for absence of snowfall,
+%
 \begin{eqnarray*}
-P(\overline{snow}|\smsn) &=&\frac{{m+n\choose m}q^{m}(1-q)^{n}P(\overline{snow})}{P(\smsntwo)}, 
+P(\overline{snow}|\smsn) &=&\frac{{m+n\choose m}q^{m}(1-q)^{n}P(\overline{snow})}{P(\smsntwo)}. 
 \end{eqnarray*}
-
+%
+We derive the likelihood score by taking the ratio of the snow and non-snow probability.
+It measures the confidence of snow actually appeared at a given time and place 
+by given all user observations.
+%
 \begin{eqnarray}
 \frac{P(snow|\smsn)}{P(\overline{snow}|\smsntwo)}
-&=&\frac{P(snow)}{P(\overline{snow})}\left(\frac{p}{q}\right)^{m}\left(\frac{1-p}{1-q}\right)^n.
+&=&\frac{P(snow)}{P(\overline{snow})}\left(\frac{p}{q}\right)^{m}\left(\frac{1-p}{1-q}\right)^n
 \label{eq:conf}
 \end{eqnarray}
-
-
 
 
