@@ -1,0 +1,90 @@
+\begin{thebibliography}{10}
+
+\bibitem{facebookstatistics}
+top-15-valuable-facebook-statistics.
+\newblock http://www7.ncdc.noaa.gov/IPS/cd/cd.html.
+
+\bibitem{bollen11twitter}
+J.~Bollen, H.~Mao, and X.-J. Zeng.
+\newblock Twitter mood predicts the stock market.
+\newblock {\em Journal of Computational Science}, 2(1):1--8, 2011.
+
+\bibitem{fedorov2015snowwatch}
+R.~Fedorov, P.~Fraternali, C.~Pasini, and M.~Tagliasacchi.
+\newblock Snowwatch: Snow monitoring through acquisition and analysis of
+  user-generated content.
+\newblock {\em arXiv preprint arXiv:1507.08958}, 2015.
+
+\bibitem{fedorov2014snow}
+R.~Fedorov, P.~Fraternali, and M.~Tagliasacchi.
+\newblock Snow phenomena modeling through online public media.
+\newblock In {\em Image Processing (ICIP), 2014 IEEE International Conference
+  on}, pages 2174--2176. IEEE, 2014.
+
+\bibitem{khosla2014looking}
+A.~Khosla, B.~An, J.~J. Lim, and A.~Torralba.
+\newblock Looking beyond the visible scene.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2014 IEEE
+  Conference on}, pages 3710--3717. IEEE, 2014.
+
+\bibitem{li2015celebritynet}
+L.-J. Li, D.~A. Shamma, X.~Kong, S.~Jafarpour, R.~Van~Zwol, and X.~Wang.
+\newblock Celebritynet: A social network constructed from large-scale online
+  celebrity images.
+\newblock {\em ACM Transactions on Multimedia Computing, Communications, and
+  Applications (TOMM)}, 12(1):3, 2015.
+
+\bibitem{murdock}
+C.~Murdock, N.~Jacobs, and R.~Pless.
+\newblock {Webcam2Satellite}: Estimating cloud maps from webcam imagery.
+\newblock In {\em WACV}, 2013.
+
+\bibitem{murdock2015building}
+C.~Murdock, N.~Jacobs, and R.~Pless.
+\newblock Building dynamic cloud maps from the ground up.
+\newblock In {\em Proceedings of the IEEE International Conference on Computer
+  Vision}, pages 684--692, 2015.
+
+\bibitem{omori2014can}
+M.~Omori, M.~Hirota, H.~Ishikawa, and S.~Yokoyama.
+\newblock Can geo-tags on flickr draw coastlines?
+\newblock In {\em Proceedings of the 22nd ACM SIGSPATIAL International
+  Conference on Advances in Geographic Information Systems}, pages 425--428.
+  ACM, 2014.
+
+\bibitem{porzi2015predicting}
+L.~Porzi, S.~Rota~Bul{\`o}, B.~Lepri, and E.~Ricci.
+\newblock Predicting and understanding urban perception with convolutional
+  neural networks.
+\newblock In {\em Proceedings of the 23rd Annual ACM Conference on Multimedia
+  Conference}, pages 139--148. ACM, 2015.
+
+\bibitem{vsecerov2015analysis}
+M.~{\v{S}}e{\'c}erov.
+\newblock {\em Analysis of panoramio photo tags in order to extract land use
+  information}.
+\newblock PhD thesis, 2015.
+
+\bibitem{wood2013usingtourism}
+S.~A. Wood, A.~D. Guerry, J.~M. Silver, and M.~Lacayo.
+\newblock Using social media to quantify nature-based tourism and recreation.
+\newblock {\em Scientific reports}, 3, 2013.
+
+\bibitem{you2015multifacetedelections}
+Q.~You, L.~Cao, Y.~Cong, X.~Zhang, and J.~Luo.
+\newblock A multifaceted approach to social multimedia-based prediction of
+  elections.
+\newblock {\em Multimedia, IEEE Transactions on}, 17(12):2271--2280, 2015.
+
+\bibitem{ecology2012www}
+H.~Zhang, M.~Korayem, D.~Crandall, and G.~LeBuhn.
+\newblock {Mining Photo-sharing Websites to Study Ecological Phenomena}.
+\newblock In {\em WWW}, 2012.
+
+\bibitem{zhou2014recognizing}
+B.~Zhou, L.~Liu, A.~Oliva, and A.~Torralba.
+\newblock Recognizing city identity via attribute analysis of geo-tagged
+  images.
+\newblock In {\em Computer Vision--ECCV 2014}, pages 519--534. Springer, 2014.
+
+\end{thebibliography}
