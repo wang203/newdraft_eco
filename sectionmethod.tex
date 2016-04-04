@@ -126,12 +126,12 @@ given all observers (photographers) spotting snow
 or non-snow, we have the posterior probability of snowfall presence at each time and location:
 %
 %
-\newcommand{\smsn}{s^m, \bar{s}^n}
-\newcommand{\smsntwo}{s^m, \bar{s}^n}
+\newcommand{\umun}{u^m, \bar{u}^n}
+\newcommand{\umuntwo}{u^m, \bar{u}^n}
 %
 \begin{eqnarray*}
-P(snow|\smsn) &=&\frac{ P(\smsn|snow)P(snow)}{P(\smsntwo)} \\
-&=&\frac{{m+n\choose m}p^{m}(1-p)^{n}P(snow)}{P(\smsntwo)}, 
+P(snow|\umun) &=&\frac{ P(\umun|snow)P(snow)}{P(\umuntwo)} \\
+&=&\frac{{m+n\choose m}p^{m}(1-p)^{n}P(snow)}{P(\umuntwo)}, 
 \end{eqnarray*}
 %
 where we use $P(snow)$ as a general prior probability describing in entire North America, 
@@ -139,7 +139,7 @@ the chance to see a snow day at
 any time of a year. So we can also derive the similar posterior probability for absence of snowfall,
 %
 \begin{eqnarray*}
-P(\overline{snow}|\smsn) &=&\frac{{m+n\choose m}q^{m}(1-q)^{n}P(\overline{snow})}{P(\smsntwo)}. 
+P(\overline{snow}|\umun) &=&\frac{{m+n\choose m}q^{m}(1-q)^{n}P(\overline{snow})}{P(\umuntwo)}. 
 \end{eqnarray*}
 %
 We derive the likelihood score by taking the ratio of the snow and non-snow probability.
@@ -148,7 +148,7 @@ and place
 by given all user observations.
 %
 \begin{eqnarray}
-\frac{P(snow|\smsn)}{P(\overline{snow}|\smsntwo)}
+\frac{P(snow|\umun)}{P(\overline{unow}|\umuntwo)}
 &=&\frac{P(snow)}{P(\overline{snow})}\left(\frac{p}{q}\right)^{m}\left(\frac{1-p}{1-q}\right)^n
 \label{eq:conf}
 \end{eqnarray}
