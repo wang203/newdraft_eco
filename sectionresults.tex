@@ -2,8 +2,9 @@
 We study two important ecology phenomena, for each time period and location, 
 wether there is snowfall and are there many plants with green leaves? We discuss the experimental setup 
 and the results and evaluation below.
+
 \subsection{Snow Case}
-\subsubsection{Single Image Classification}
+\subsubsection{Scene Classification}
 We are using the same hand-labeled dataset as in \fxnote{cite{workshop}}.
 Beyond combining visual features, 
 we build CNN visual model for our snow scene classification problem 
@@ -11,7 +12,7 @@ by fine-tuning Imagenet pre-trained model with the 8000 training images. The bes
 performance in \fxnote{cite{workshop}} using visual features with SVM is $80.50\%$ acuracy.
 On the same testing set of 2000 images, our CNN model achieves $88.06\%$ accuracy as a significant 
 improvement. Details of comparison between performance of CNN model
- and other visual features are  are presented in table ~\ref{tab:snow}. Therefore, we use this as our recognitiion model for final predictions.
+ and other visual features are  are presented in Table ~\ref{tab:snow}. Therefore, we use this as our recognitiion model for final predictions.
 
 Figure ~\ref{fig:PR_ROC_snow} compares classification performance of CNN with 
 individual visual features and their combination in terms of an ROC curve, 
@@ -120,3 +121,289 @@ City &  baseline & active user/day  & snow days &  tag confidence &  vision conf
 \label{fig:snowcurve}
 \vspace{-12pt}
 \end{figure*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Vegetation Case}
+Vegetation coverage is a more stable phenomenon, so we study this case in every 16 days period instead of daily base.
+Unlike snow scene that 
+tag feature is very discriminative, according 
+to \fxnote{cite{www}}, textual tag of greenery is highly misleading. 
+Terms like ``tree'' or even ``leaf'' are not necessarily 
+indicating green color, but terms like ``green'' or 
+``yellow'' could be used to describe a wild set of objects outside of vegetation. Moreover, while vegetation is 
+such a common natural scene appears in most of the outdoor images, it is very unlikely people would include it in their textual tags 
+to describe the image. In this case, from a huge number of images contain greenery shared online, only a very small portion of them 
+actually provides related textual tags. On the other hand, we believe visual feature can be very descriptive and exclusively 
+describe vegetation with green leaves.
+
+
+
+\subsubsection{Dataset}
+We build a data set with over 10000 Flickr images taken before 2009, and are composed by images with "forest" and "summer" like tags 
+and also random images without any tag preference. These images are hand labeled with categories 
+\textit{"Outdoor Greenery","Outdoor non-Greenery","Indoor","Other-modified"},and \textit{"Not available"}.
+
+Finally, we build a positive set with images in category \textit{"Outdoor Greenery"} and a negative set 
+with images in categories \textit{"Outdoor non-Greenery"} and \textit{"Indoor"}. To learn a image classification model, 
+we build a training set with 4000 images and a testing set with 1900 images. 
+In training and testing set, there are equal number of positive and negative samples.
+To show the diversity of our Flickr image dataset, in figure ~\ref{fig:dataset}
+we present a random sample of images in our vegetation dataset labeled as positive and negative.
+
+In continental-scale prediction, we only look at images on Flickr.com in year 2007 to 2010, with no tag limitation. 
+We filter out the photos with too unreasonable timestamps such as the taken time and uploading time is exactly the same.
+We only use images with high precision geotag according to the image metadata Flickr API provide \fxnote{cite url}. And we still process the 
+satellite ground truth the same way as in \fxnote{cite{www}}.
+
+
+
+\subsubsection{Scene Classification}
+We hand-labeled a seperate dataset sampled from Flickr 
+Compare to snow scene, vegetation has its strong and probably ``unique'' color and texture to be described in traditional visual 
+features, while it does not make such a differenc to CNN as a data driven model. Combining color SIFT and color GIST features yields a 
+compelling prediction accuracy of $85.90\%$ though CNN still gives a higher performance of $88.00\%$. We present detail performance in Table 
+~\ref{tab:veg_img_classifier}.
+
+\subsubsection{Vegetation Coverage over Time and Space}
+We consider North America area as in snow experiments. From images in 2007 and 2008, 
+we learn the prior probability of a place being covered by vegetation at any given 16-days period is $P(green) = 75.16\%$. 
+For any user taken photos from a place covered by greenery at a given time, the probability of the photos contain greenery scene is 
+$p = P(u|green) = 27.18\%$. On 
+the other hand, there is only a small chance $q = P(u|\overline{green}) = 3.03\%$ to see a user uploading images with greenery in a place 
+not covered by enough vegetation according to satellite observation. Since residence enjoy meadow around their house and it is unlikely not 
+to see any plants wherever people would go, there is a considerable chance to see green scene in photos, but when there are enough users 
+uploading images, we will still be able to distinguish the actual green and non-green area with the likelihood model.
+
+While the satellite has ground truth for $87594$ bins in North America, our method predicts our method predicts $61602$ bins ($70.3\%$
+ in quantity). Moreover, about $20\%$ of satellite ground truth locate in north Canada where the ecology system 
+is stable and very little human-environment interaction happens. Moreover, our data is from users in social media. 
+So our prediction focus on more populated locations or places people like to visit such as natural scenery.
+
+For evaluation purpose, we only evaluate the time and location both Flickr and Satellite have data in North America. The overall accuracy 
+of our method is $93.2\%$ comparing to the $86.6\%$ majority baseline. 
+The precision of green bins is $98.8\%$ and the precision of non-green bins is $68.2\%$. Recall of green bins is $93.3\%$
+ and recall of non-green bins is $92.5\%$. We tested the performance of using only tags to make vegetation coverage prediction 
+~\cite{ecology2012www}. The performance shows tag
+feature is not going to improve the result of using visual evidence. Figure ~\ref{fig:curvevege} shows the precision 
+and recall curve of vegetation prediction in continental-scale.
+
+Generally, almost all the false negative error is due to the sparseness of data. 
+While not enough images are collected at certain location during some time, 
+there is either no green image found or green images are too few compare to 
+the quantity of non-green images. On the other hand, false positive error is rare 
+(less than $1\%$) and complex. We found most images in the false positive bins are 
+actually green vegetation images. ( here we need some more explanation) In figure ~\ref{fig:falseposi}, 
+we show some examples of images in false positive bins. 
+
+
+\subsubsection{Performance at single place over time}
+For each single location, we can find out when exactly did the leaves turn yellow as well as when
+did the leaves turn back to green. 
+Figure ~\ref{fig:placeinbar} shows vegetation coverage of 6 places over 2009 and 2010. 
+Prediction results on top usually have more data available than groud truth on the bottom. 
+And we can see the ground truth is likely missing at the time when the leaves change color. 
+
+
+
+\subsubsection{Single time over places}
+
+Sample maps are presented in figure ~\ref{fig:map}. These maps are visualization of the performance
+in North America.
+We use public sharing Flickr images that are more likely taken from more populated or more popular locations. 
+The satellite ground truth, instead, is limited to cloud coverage and other sensor precision issue.
+
+
+
+
+
+\begin{figure*}[th]
+{\small{
+\begin{center}
+\begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
+%\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/1.jpg} &
+%\includegraphics[height=1in]{imggrid/datasetposi/2.jpg} &
+%\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/3.jpg} &
+%\includegraphics[height=1in]{imggrid/datasetposi/4.jpg} &
+%\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/5.jpg} \\
+%%\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\
+%\\[-6pt]
+%\hline
+%\\[-6pt]
+\includegraphics[height=1in]{imggrid/datasetposi/6.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/7.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/8.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/9.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/10.jpg} \\
+\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
+%\\[-6pt]
+%\hline
+%\\[-6pt]
+%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/1.jpg} &
+%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/2.jpg} &
+%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/3.jpg} &
+%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/4.jpg} &
+%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/5.jpg} \\
+%\multicolumn{5}{c}{(c) Random false negatives (snow images classified as non-snow)} \\ 
+\\[-6pt]
+\hline
+\\[-6pt]
+\includegraphics[height=1in]{imggrid/datasetnega/6.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/7.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/8.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/9.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/10.jpg} \\
+\multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
+\end{tabular}
+\end{center}
+}}
+\caption{Random images from our hand-labeled dataset. Public sharing images are various in quality, contents, illumination and view angle.
+Negative images like winter trees without leaves, or indoor images capturing a photo of forest are more confusing.}
+\label{fig:dataset}
+\end{figure*}
+
+\begin{table}\centering
+\caption {\textbf{Results for our visual models for vegetation.}}
+\label{tab:veg_img_classifier} 
+\begin{tabular}{@{}cr@{}}\toprule
+Visual feature &  Accuracy\\\midrule
+Random Baseline & 50.00\%\\
+Color SIFT & 78.10\%\\
+Color GIST & 82.58\% \\
+SIFT and GIST& 85.9\% \\
+CNN\% &  88.0\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}
+%{\small{
+\begin{center}
+\includegraphics[width=0.80\textwidth]{figure/curvevege.jpg}
+\end{center}
+%}}
+\vspace{-6pt}
+\addvspace{2mm}
+\caption{Precision and recall curve of vegetation prediction in continental scale.}
+\label{fig:curvevege}
+\vspace{-6pt}
+\end{figure*}
+\addvspace{5mm}
+
+\begin{figure*}[th]
+{\small{
+\begin{center}
+\begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
+%\includegraphics[width=0.19\textwidth]{imggrid/falseposi/1.jpg} &
+%\includegraphics[width=0.19\textwidth]{imggrid/falseposi/2.jpg} &
+%\includegraphics[height=1in]{imggrid/falseposi/3.jpg} &
+%\includegraphics[height=1in]{imggrid/falseposi/4.jpg} &
+%\includegraphics[height=1in]{imggrid/falseposi/5.jpg} \\
+%%\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\
+%\\[-6pt]
+%\hline
+%\\[-6pt]
+\includegraphics[width=0.19\textwidth]{imggrid/falseposi/6.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/falseposi/7.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/falseposi/8.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/falseposi/9.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/falseposi/10.jpg} \\
+%\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
+\\[-6pt]
+\hline
+\\[-6pt]
+%\includegraphics[height=1in]{imggrid/falseposi/11.jpg} &
+%\includegraphics[height=1in]{imggrid/falseposi/12.jpg} &
+%\includegraphics[width=0.19\textwidth]{imggrid/falseposi/13.jpg} &
+%\includegraphics[width=0.19\textwidth]{imggrid/falseposi/14.jpg} &
+%\includegraphics[height=1in]{imggrid/falseposi/15.jpg} \\
+%%\multicolumn{5}{c}{(c) Random false negatives (snow images classified as non-snow)} \\ 
+%\\[-6pt]
+%\hline
+%\\[-6pt]
+\includegraphics[width=0.19\textwidth]{imggrid/falseposi/16.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/falseposi/17.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/falseposi/18.jpg} &
+\includegraphics[height=1in]{imggrid/falseposi/19.jpg} &
+\includegraphics[width=0.19\textwidth]{imggrid/falseposi/20.jpg} \\
+%\multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
+\end{tabular}
+\end{center}
+}}
+\vspace{-6pt}
+\caption{In vegetation detection over North America in 2009 and 2010, among all false positive bins, there are ... images that are predicted as greenery. And these images are the reason these bins are predicted as green. Here are some random selected examples of the green images.}
+\label{fig:falseposi}
+\vspace{-6pt}
+\end{figure*}
+
+% bar plot of 2 places
+\begin{figure}
+%{\small{
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics[width=0.14\textwidth]{bar/8560.jpg} &
+\includegraphics[width=0.14\textwidth]{bar/8561.jpg} &
+%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
+\includegraphics[width=0.14\textwidth]{bar/8881.jpg} \\
+\includegraphics[width=0.14\textwidth]{bar/8911.jpg} &
+\includegraphics[width=0.14\textwidth]{bar/9705.jpg} &
+%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
+\includegraphics[width=0.14\textwidth]{bar/10816.jpg} \\
+%(a) & (b)\\
+\\
+\end{tabular}
+\end{center}
+%}}
+\vspace{-24pt}
+\caption{Yellow bars show non-greenery at that time. Blue bars represent greenery. Prediction results on top shows 6 random places comparing to satellite ground truth. The ground truth on the bottom tends to disappear when leaves are turning yellow or green.}
+\label{fig:placeinbar}
+\vspace{-12pt}
+\end{figure}
+
+\begin{figure}
+%{\small{
+\begin{center}
+\begin{tabular}{cccc}
+\includegraphics[width=0.10\textwidth]{map/72.png} &
+\includegraphics[width=0.10\textwidth]{map/77.png} &
+\includegraphics[width=0.10\textwidth]{map/78.png} &
+%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
+\includegraphics[width=0.10\textwidth]{map/79.png}  \\
+Mar, 6th&May, 25th&Jun, 10th&Jun, 26th\\
+\includegraphics[width=0.10\textwidth]{map/82.png} &
+\includegraphics[width=0.10\textwidth]{map/83.png} &
+\includegraphics[width=0.10\textwidth]{map/84.png} &
+%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
+\includegraphics[width=0.10\textwidth]{map/91.png}  \\
+Aug, 13th&Aug, 29th&Sep, 14th&Dec 19th\\
+\\
+\end{tabular}
+\end{center}
+%}}
+\vspace{-24pt}
+\caption{%On two 16-days time period, end of August on the left and during Christmas on the right, we show the confusion matrix map here. Orange bins are true positive; yellow bins are false negative; blue bins are false positive; and black bins are true negative.
+We use prediction results to recreate vegetation coverage maps for each 16-days period. There are 8 maps picked in 2010. The dates under each map are the starting date of each 16-days period.
+Orange bins represent true positive; blue bins are false positives; yellow bins are true negatives and black bins are false negatives. }
+\label{fig:map}
+\vspace{-12pt}
+\end{figure}
