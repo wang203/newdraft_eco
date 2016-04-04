@@ -21,11 +21,24 @@ R.~Fedorov, P.~Fraternali, and M.~Tagliasacchi.
 \newblock In {\em Image Processing (ICIP), 2014 IEEE International Conference
   on}, pages 2174--2176. IEEE, 2014.
 
+\bibitem{glasner2015hot}
+D.~Glasner, P.~Fua, T.~Zickler, and L.~Zelnik-Manor.
+\newblock Hot or not: Exploring correlations between appearance and
+  temperature.
+\newblock In {\em Proceedings of the IEEE International Conference on Computer
+  Vision}, pages 3997--4005, 2015.
+
 \bibitem{khosla2014looking}
 A.~Khosla, B.~An, J.~J. Lim, and A.~Torralba.
 \newblock Looking beyond the visible scene.
 \newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2014 IEEE
   Conference on}, pages 3710--3717. IEEE, 2014.
+
+\bibitem{laffont2014transient}
+P.-Y. Laffont, Z.~Ren, X.~Tao, C.~Qian, and J.~Hays.
+\newblock Transient attributes for high-level understanding and editing of
+  outdoor scenes.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 33(4):149, 2014.
 
 \bibitem{li2015celebritynet}
 L.-J. Li, D.~A. Shamma, X.~Kong, S.~Jafarpour, R.~Van~Zwol, and X.~Wang.
@@ -44,6 +57,13 @@ C.~Murdock, N.~Jacobs, and R.~Pless.
 \newblock Building dynamic cloud maps from the ground up.
 \newblock In {\em Proceedings of the IEEE International Conference on Computer
   Vision}, pages 684--692, 2015.
+
+\bibitem{oba2014towards}
+H.~Oba, M.~Hirota, R.~Chbeir, H.~Ishikawa, and S.~Yokoyama.
+\newblock Towards better land cover classification using geo-tagged
+  photographs.
+\newblock In {\em Multimedia (ISM), 2014 IEEE International Symposium on},
+  pages 320--327. IEEE, 2014.
 
 \bibitem{omori2014can}
 M.~Omori, M.~Hirota, H.~Ishikawa, and S.~Yokoyama.
