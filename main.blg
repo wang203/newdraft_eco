@@ -8,45 +8,45 @@ Repeated entry---line 78 of file eco.bib
 I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in facebookstatistics
 Warning--empty school in vsecerov2015analysis
-You've used 19 entries,
+You've used 18 entries,
             2118 wiz_defined-function locations,
-            596 strings with 7395 characters,
-and the built_in function-call counts, 7909 in all, are:
-= -- 781
-> -- 399
-< -- 9
-+ -- 158
-- -- 138
-* -- 539
-:= -- 1234
-add.period$ -- 62
-call.type$ -- 19
-change.case$ -- 125
+            591 strings with 7200 characters,
+and the built_in function-call counts, 7427 in all, are:
+= -- 732
+> -- 381
+< -- 8
++ -- 151
+- -- 132
+* -- 510
+:= -- 1167
+add.period$ -- 59
+call.type$ -- 18
+change.case$ -- 119
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 322
-empty$ -- 602
-format.name$ -- 138
-if$ -- 1721
+cite$ -- 20
+duplicate$ -- 299
+empty$ -- 561
+format.name$ -- 132
+if$ -- 1610
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 17
-newline$ -- 97
-num.names$ -- 36
-pop$ -- 156
+int.to.str$ -- 18
+missing$ -- 16
+newline$ -- 92
+num.names$ -- 34
+pop$ -- 147
 preamble$ -- 1
-purify$ -- 107
+purify$ -- 102
 quote$ -- 0
-skip$ -- 247
+skip$ -- 227
 stack$ -- 0
-substring$ -- 460
-swap$ -- 116
-text.length$ -- 9
+substring$ -- 423
+swap$ -- 105
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
+type$ -- 72
 warning$ -- 2
-while$ -- 68
-width$ -- 21
-write$ -- 209
+while$ -- 63
+width$ -- 20
+write$ -- 198
 (There was 1 error message)

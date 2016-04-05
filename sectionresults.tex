@@ -109,18 +109,18 @@ City &  baseline & active user/day  & snow days &  tag confidence &  vision conf
 \vspace{-12pt}
 \end{table*}
 
-\begin{figure*}
+\begin{figure}
 %{\small{
 \begin{center}
-\includegraphics[width=0.40\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-snow.jpg}
-\includegraphics[width=0.40\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-nonsnow.jpg}
+\includegraphics[width=0.22\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-snow.jpg}
+\includegraphics[width=0.22\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-nonsnow.jpg}
 \end{center}
 %}}
 \vspace{-12pt}
 \caption{Precision and recall curve of snow prediction (left) and nonsnow (right) in continental scale.}
 \label{fig:snowcurve}
 \vspace{-12pt}
-\end{figure*}
+\end{figure}
 
 
 
@@ -237,50 +237,33 @@ The satellite ground truth, instead, is limited to cloud coverage and other sens
 
 
 
-\begin{figure*}[th]
+\begin{figure}[th]
 {\small{
 \begin{center}
 \begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
-%\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/1.jpg} &
-%\includegraphics[height=1in]{imggrid/datasetposi/2.jpg} &
-%\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/3.jpg} &
-%\includegraphics[height=1in]{imggrid/datasetposi/4.jpg} &
-%\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/5.jpg} \\
-%%\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\
-%\\[-6pt]
-%\hline
-%\\[-6pt]
-\includegraphics[height=1in]{imggrid/datasetposi/6.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/7.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/8.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/9.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/datasetposi/10.jpg} \\
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/6.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/7.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/8.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/9.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/10.jpg} \\
 \multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
-%\\[-6pt]
-%\hline
-%\\[-6pt]
-%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/1.jpg} &
-%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/2.jpg} &
-%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/3.jpg} &
-%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/4.jpg} &
-%\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/5.jpg} \\
-%\multicolumn{5}{c}{(c) Random false negatives (snow images classified as non-snow)} \\ 
 \\[-6pt]
 \hline
 \\[-6pt]
-\includegraphics[height=1in]{imggrid/datasetnega/6.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/7.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/8.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/9.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/datasetnega/10.jpg} \\
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/6.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/7.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/8.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/9.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/10.jpg} \\
 \multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
 \end{tabular}
 \end{center}
 }}
+\vspace{-6pt}
 \caption{Random images from our hand-labeled dataset. Public sharing images are various in quality, contents, illumination and view angle.
 Negative images like winter trees without leaves, or indoor images capturing a photo of forest are more confusing.}
 \label{fig:dataset}
-\end{figure*}
+\end{figure}
 
 \begin{table}\centering
 \caption {\textbf{Results for our visual models for vegetation.}}
@@ -296,10 +279,9 @@ CNN\% &  88.0\%\\
 \end{tabular}
 \end{table}
 
-\begin{figure*}
-%{\small{
+\begin{figure}
 \begin{center}
-\includegraphics[width=0.80\textwidth]{figure/curvevege.jpg}
+\includegraphics[width=0.45\textwidth]{figure/curvevege.jpg}
 \end{center}
 %}}
 \vspace{-6pt}
@@ -307,45 +289,27 @@ CNN\% &  88.0\%\\
 \caption{Precision and recall curve of vegetation prediction in continental scale.}
 \label{fig:curvevege}
 \vspace{-6pt}
-\end{figure*}
+\end{figure}
 \addvspace{5mm}
 
-\begin{figure*}[th]
+\begin{figure}[th]
 {\small{
 \begin{center}
 \begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
-%\includegraphics[width=0.19\textwidth]{imggrid/falseposi/1.jpg} &
-%\includegraphics[width=0.19\textwidth]{imggrid/falseposi/2.jpg} &
-%\includegraphics[height=1in]{imggrid/falseposi/3.jpg} &
-%\includegraphics[height=1in]{imggrid/falseposi/4.jpg} &
-%\includegraphics[height=1in]{imggrid/falseposi/5.jpg} \\
-%%\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\
-%\\[-6pt]
-%\hline
-%\\[-6pt]
-\includegraphics[width=0.19\textwidth]{imggrid/falseposi/6.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/falseposi/7.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/falseposi/8.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/falseposi/9.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/falseposi/10.jpg} \\
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/6.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/7.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/8.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/9.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/10.jpg} \\
 %\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
 \\[-6pt]
 \hline
 \\[-6pt]
-%\includegraphics[height=1in]{imggrid/falseposi/11.jpg} &
-%\includegraphics[height=1in]{imggrid/falseposi/12.jpg} &
-%\includegraphics[width=0.19\textwidth]{imggrid/falseposi/13.jpg} &
-%\includegraphics[width=0.19\textwidth]{imggrid/falseposi/14.jpg} &
-%\includegraphics[height=1in]{imggrid/falseposi/15.jpg} \\
-%%\multicolumn{5}{c}{(c) Random false negatives (snow images classified as non-snow)} \\ 
-%\\[-6pt]
-%\hline
-%\\[-6pt]
-\includegraphics[width=0.19\textwidth]{imggrid/falseposi/16.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/falseposi/17.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/falseposi/18.jpg} &
-\includegraphics[height=1in]{imggrid/falseposi/19.jpg} &
-\includegraphics[width=0.19\textwidth]{imggrid/falseposi/20.jpg} \\
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/16.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/17.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/18.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/19.jpg} &
+\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/20.jpg} \\
 %\multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
 \end{tabular}
 \end{center}
@@ -354,7 +318,7 @@ CNN\% &  88.0\%\\
 \caption{In vegetation detection over North America in 2009 and 2010, among all false positive bins, there are 47 images that are predicted as greenery. And these images are the reason these bins are predicted as green. Here are some random selected examples of the green images.}
 \label{fig:falseposi}
 \vspace{-6pt}
-\end{figure*}
+\end{figure}
 
 % bar plot of 2 places
 \begin{figure}
