@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  3 APR 2016 23:07
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  3 APR 2016 23:22
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -300,20 +300,20 @@ File: hpdftex.def 2007/02/07 v6.75r Hyperref driver for pdfTeX
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 (/usr/share/texmf/tex/context/base/supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -327,7 +327,7 @@ LaTeX Font Info:    ... okay on input line 59.
 \MPnumerator=\count130
 \everyMPtoPDFconversion=\toks41
 )
-Package hyperref Info: Link coloring OFF on input line 59.
+Package hyperref Info: Link coloring OFF on input line 60.
  (/usr/share/texmf/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
@@ -336,40 +336,40 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 59.
-LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 195.
+LaTeX Font Info:    Try loading font information for U+msa on input line 196.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 195.
+LaTeX Font Info:    Try loading font information for U+msb on input line 196.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 195.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 196.
 
 (/usr/share/texmf/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 195.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 196.
 
 (/usr/share/texmf/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 195.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 196.
 
 
 (/usr/share/texmf/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 195.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
  (./sectionintro.tex
 <figure/flowchartWevaluation.png, id=100, 247.92625pt x 194.7275pt>
 File: figure/flowchartWevaluation.png Graphic file (type png)
@@ -421,24 +421,24 @@ in nature area' on input line 10.
 
 ]
 FiXme Note: 'or just as the title: exploring correlations between appearance an
-d temperature' on input line 28.
+d temperature' on input line 27.
 FiXme Note: 'say more about our evaluation? or move this to another place?' on 
-input line 37.
+input line 36.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 FiXme Note: 'write something about so there are very few work appears and so we
- are working on this?' on input line 41.
+ are working on this?' on input line 40.
 FiXme Note: 'crowd? I mean groups of people like downtown, not ski activity but
  like people going to work and back everyday also a good topic to use temporal 
-dense images but Webcam is not good at this.' on input line 49.
+dense images but Webcam is not good at this.' on input line 48.
 FiXme Note: 'how helpful is this to study more areas close to urban planning, m
-arket sharing, everyday living, anything related to people' on input line 52.
-FiXme Note: 'easy to get, more reliable' on input line 54.
-FiXme Note: 'monitor? insight?' on input line 55.
-FiXme Note: ' locations more related to people' on input line 56.
+arket sharing, everyday living, anything related to people' on input line 51.
+FiXme Note: 'easy to get, more reliable' on input line 53.
+FiXme Note: 'monitor? insight?' on input line 54.
+FiXme Note: ' locations more related to people' on input line 55.
 FiXme Note: 'just want to say more areas in natural or not only natural but als
-o social' on input line 57.
+o social' on input line 56.
 )
 (./sectionmethod.texpdfTeX warning (ext4): destination with the same identifier
  (name{page.}) has been already used, duplicate ignored
@@ -449,40 +449,39 @@ l.10
 ./image/humansnow.jpg> <./image/intentiongreen.jpg> <./image/waterfallgreen.jpg
 > <./image/dogtree.jpg> <./image/humantree.jpg> <./figure/flowchartWevaluation.
 png>]
-FiXme Note: 'cite{www}' on input line 12.
-FiXme Note: 'cite{workshop}' on input line 16.
-FiXme Note: 'section 3.3' on input line 23.
-FiXme Note: 'cite{www}' on input line 25.
-FiXme Note: 'cite{workshop}' on input line 31.
-FiXme Note: 'cite{SIFT}' on input line 38.
+
+LaTeX Warning: Reference `sssec:model' on page \thepage  undefined on input lin
+e 25.
+
+FiXme Note: 'cite{SIFT}' on input line 41.
 FiXme Note: 'From now on to the end of this paragraph, it's the same as our wor
 kshop paper. Could you help me to give a shorter global description?' on input 
-line 54.
-FiXme Note: 'cite{oliva2001modeling}' on input line 57.
-FiXme Note: 'cite{douze2009evaluation}' on input line 60.
+line 57.
+FiXme Note: 'cite{oliva2001modeling}' on input line 60.
+FiXme Note: 'cite{douze2009evaluation}' on input line 63.
 
-Overfull \hbox (8.19742pt too wide) in paragraph at lines 51--61
+Overfull \hbox (8.19742pt too wide) in paragraph at lines 54--64
 \T1/aer/bx/n/9 liva2001modeling[]\T1/aer/m/n/9 . Our vari-ant pro-duces a 1536-
 dimensional
  []
 
 
-Overfull \hbox (44.24675pt too wide) in paragraph at lines 51--61
+Overfull \hbox (44.24675pt too wide) in paragraph at lines 54--64
 \T1/aer/m/n/9 fi-ca-tion re-sults sig-nif-i-cantly \T1/aess/bx/n/9 FiXme \T1/ae
 r/bx/n/9 Note: cite-douze2009evaluation[]\T1/aer/m/n/9 . 
  []
 
-FiXme Note: 'cite{krizhevsky2012imagenet} ' on input line 66.
-FiXme Note: 'cite{ilsvrcarxiv14}' on input line 69.
-FiXme Note: 'cite{Oquab14}' on input line 89.
+FiXme Note: 'cite{krizhevsky2012imagenet} ' on input line 69.
+FiXme Note: 'cite{ilsvrcarxiv14}' on input line 72.
+FiXme Note: 'cite{Oquab14}' on input line 92.
 
-Overfull \hbox (1.22186pt too wide) in paragraph at lines 92--92
+Overfull \hbox (1.22186pt too wide) in paragraph at lines 95--95
 []\secfnt Aggregating Vi-sual Ev-i-dence Across Users 
  []
 
-FiXme Note: 'cite{www}' on input line 107.
+FiXme Note: 'cite{www}' on input line 111.
 
-Overfull \hbox (13.43137pt too wide) in paragraph at lines 107--123
+Overfull \hbox (13.43137pt too wide) in paragraph at lines 111--127
 []\T1/aer/m/n/9 We adopt the like-li-hood model from \T1/aess/bx/n/9 FiXme \T1/
 aer/bx/n/9 Note: citewww[]\T1/aer/m/n/9 ,
  []
@@ -491,14 +490,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.123 
+l.127 
        [3]
-FiXme Note: 'cite{www}' on input line 124.
+FiXme Note: 'cite{www}' on input line 128.
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 134.
+(amsmath)                 on input line 138.
 
 ) (./sectionresults.tex
 FiXme Note: 'cite{workshop}' on input line 8.
@@ -511,28 +510,29 @@ terms
 
 FiXme Note: 'cite{workshop}' on input line 29.
 FiXme Note: 'cite{www}' on input line 48.
-<figure/ROC-CNN-curves.jpg, id=176, 803.0pt x 602.25pt>
+<figure/ROC-CNN-curves.jpg, id=181, 803.0pt x 602.25pt>
 File: figure/ROC-CNN-curves.jpg Graphic file (type jpg)
 
 <use figure/ROC-CNN-curves.jpg>
-<figure/PR-CNN-curves.jpg, id=177, 803.0pt x 602.25pt>
+<figure/PR-CNN-curves.jpg, id=182, 803.0pt x 602.25pt>
 File: figure/PR-CNN-curves.jpg Graphic file (type jpg)
 
 <use figure/PR-CNN-curves.jpg>
-<figure/PR-snow.jpg, id=178, 401.5pt x 301.125pt>
+<figure/PR-snow.jpg, id=183, 401.5pt x 301.125pt>
 File: figure/PR-snow.jpg Graphic file (type jpg)
  <use figure/PR-snow.jpg>
-<figure/PR-nonsnow.jpg, id=180, 401.5pt x 301.125pt>
+<figure/PR-nonsnow.jpg, id=185, 401.5pt x 301.125pt>
 File: figure/PR-nonsnow.jpg Graphic file (type jpg)
 
-<use figure/PR-nonsnow.jpg>
-FiXme Note: 'cite{www}' on input line 151.
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+<use figure/PR-nonsnow.jpg>pdfTeX warning (ext4): destination with the same ide
+ntifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.159 
-       [4]
+l.148 V
+       egetation coverage is a more stable phenomenon, so we study this case...
+[4]
+FiXme Note: 'cite{www}' on input line 151.
+
 Overfull \hbox (7.71309pt too wide) in paragraph at lines 163--166
 \T1/aer/m/it/9 "Out-door Green-ery","Outdoor non-Greenery","Indoor","Other-
  []
@@ -543,108 +543,107 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.198 W
-       hile the satellite has ground truth for $87594$ bins in North America...
-[5 <./figure/ROC-CNN-curves.jpg> <./figure/PR-CNN-curves.jpg>]
-<imggrid/datasetposi/6.jpg, id=205, 68.55325pt x 103.24286pt>
+l.202 
+       [5 <./figure/ROC-CNN-curves.jpg> <./figure/PR-CNN-curves.jpg>]
+<imggrid/datasetposi/6.jpg, id=210, 68.55325pt x 103.24286pt>
 File: imggrid/datasetposi/6.jpg Graphic file (type jpg)
 
 <use imggrid/datasetposi/6.jpg>
-<imggrid/datasetposi/7.jpg, id=206, 150.5625pt x 100.27463pt>
+<imggrid/datasetposi/7.jpg, id=211, 150.5625pt x 100.27463pt>
 File: imggrid/datasetposi/7.jpg Graphic file (type jpg)
 
 <use imggrid/datasetposi/7.jpg>
-<imggrid/datasetposi/8.jpg, id=207, 100.375pt x 66.649pt>
+<imggrid/datasetposi/8.jpg, id=212, 100.375pt x 66.649pt>
 File: imggrid/datasetposi/8.jpg Graphic file (type jpg)
 
 <use imggrid/datasetposi/8.jpg>
-<imggrid/datasetposi/9.jpg, id=208, 120.45pt x 85.7604pt>
+<imggrid/datasetposi/9.jpg, id=213, 120.45pt x 85.7604pt>
 File: imggrid/datasetposi/9.jpg Graphic file (type jpg)
 
 <use imggrid/datasetposi/9.jpg>
-<imggrid/datasetposi/10.jpg, id=209, 90.3375pt x 60.7068pt>
+<imggrid/datasetposi/10.jpg, id=214, 90.3375pt x 60.7068pt>
 File: imggrid/datasetposi/10.jpg Graphic file (type jpg)
 
 <use imggrid/datasetposi/10.jpg>
-<imggrid/datasetnega/6.jpg, id=210, 80.2197pt x 120.45pt>
+<imggrid/datasetnega/6.jpg, id=215, 80.2197pt x 120.45pt>
 File: imggrid/datasetnega/6.jpg Graphic file (type jpg)
 
 <use imggrid/datasetnega/6.jpg>
-<imggrid/datasetnega/7.jpg, id=211, 376.40625pt x 237.88875pt>
+<imggrid/datasetnega/7.jpg, id=216, 376.40625pt x 237.88875pt>
 File: imggrid/datasetnega/7.jpg Graphic file (type jpg)
 
 <use imggrid/datasetnega/7.jpg>
-<imggrid/datasetnega/8.jpg, id=212, 150.5625pt x 100.57574pt>
+<imggrid/datasetnega/8.jpg, id=217, 150.5625pt x 100.57574pt>
 File: imggrid/datasetnega/8.jpg Graphic file (type jpg)
 
 <use imggrid/datasetnega/8.jpg>
-<imggrid/datasetnega/9.jpg, id=213, 501.875pt x 376.40625pt>
+<imggrid/datasetnega/9.jpg, id=218, 501.875pt x 376.40625pt>
 File: imggrid/datasetnega/9.jpg Graphic file (type jpg)
 
 <use imggrid/datasetnega/9.jpg>
-<imggrid/datasetnega/10.jpg, id=214, 501.875pt x 334.24875pt>
+<imggrid/datasetnega/10.jpg, id=219, 501.875pt x 334.24875pt>
 File: imggrid/datasetnega/10.jpg Graphic file (type jpg)
 
 <use imggrid/datasetnega/10.jpg>
-<figure/curvevege.jpg, id=215, 1124.2pt x 421.575pt>
+<figure/curvevege.jpg, id=220, 1124.2pt x 421.575pt>
 File: figure/curvevege.jpg Graphic file (type jpg)
 
 <use figure/curvevege.jpg>
-<imggrid/falseposi/6.jpg, id=216, 376.40625pt x 281.55188pt>
+<imggrid/falseposi/6.jpg, id=221, 376.40625pt x 281.55188pt>
 File: imggrid/falseposi/6.jpg Graphic file (type jpg)
 
 <use imggrid/falseposi/6.jpg>
-<imggrid/falseposi/7.jpg, id=217, 376.40625pt x 281.55188pt>
+<imggrid/falseposi/7.jpg, id=222, 376.40625pt x 281.55188pt>
 File: imggrid/falseposi/7.jpg Graphic file (type jpg)
 
 <use imggrid/falseposi/7.jpg>
-<imggrid/falseposi/8.jpg, id=218, 376.40625pt x 281.55188pt>
+<imggrid/falseposi/8.jpg, id=223, 376.40625pt x 281.55188pt>
 File: imggrid/falseposi/8.jpg Graphic file (type jpg)
 
 <use imggrid/falseposi/8.jpg>
-<imggrid/falseposi/9.jpg, id=219, 501.875pt x 376.40625pt>
+<imggrid/falseposi/9.jpg, id=224, 501.875pt x 376.40625pt>
 File: imggrid/falseposi/9.jpg Graphic file (type jpg)
 
 <use imggrid/falseposi/9.jpg>
-<imggrid/falseposi/10.jpg, id=220, 501.875pt x 335.2525pt>
+<imggrid/falseposi/10.jpg, id=225, 501.875pt x 335.2525pt>
 File: imggrid/falseposi/10.jpg Graphic file (type jpg)
 
 <use imggrid/falseposi/10.jpg>
-<imggrid/falseposi/16.jpg, id=221, 157.10869pt x 117.83153pt>
+<imggrid/falseposi/16.jpg, id=226, 157.10869pt x 117.83153pt>
 File: imggrid/falseposi/16.jpg Graphic file (type jpg)
 
 <use imggrid/falseposi/16.jpg>
-<imggrid/falseposi/17.jpg, id=222, 501.875pt x 376.40625pt>
+<imggrid/falseposi/17.jpg, id=227, 501.875pt x 376.40625pt>
 File: imggrid/falseposi/17.jpg Graphic file (type jpg)
 
 <use imggrid/falseposi/17.jpg>
-<imggrid/falseposi/18.jpg, id=223, 200.75pt x 150.5625pt>
+<imggrid/falseposi/18.jpg, id=228, 200.75pt x 150.5625pt>
 File: imggrid/falseposi/18.jpg Graphic file (type jpg)
 
 <use imggrid/falseposi/18.jpg>
-<imggrid/falseposi/19.jpg, id=224, 376.40625pt x 501.875pt>
+<imggrid/falseposi/19.jpg, id=229, 376.40625pt x 501.875pt>
 File: imggrid/falseposi/19.jpg Graphic file (type jpg)
 
 <use imggrid/falseposi/19.jpg>
-<imggrid/falseposi/20.jpg, id=225, 501.875pt x 335.2525pt>
+<imggrid/falseposi/20.jpg, id=230, 501.875pt x 335.2525pt>
 File: imggrid/falseposi/20.jpg Graphic file (type jpg)
 
-<use imggrid/falseposi/20.jpg> <bar/8560.jpg, id=226, 404.712pt x 303.534pt>
+<use imggrid/falseposi/20.jpg> <bar/8560.jpg, id=231, 404.712pt x 303.534pt>
 File: bar/8560.jpg Graphic file (type jpg)
 
-<use bar/8560.jpg> <bar/8561.jpg, id=227, 404.712pt x 303.534pt>
+<use bar/8560.jpg> <bar/8561.jpg, id=232, 404.712pt x 303.534pt>
 File: bar/8561.jpg Graphic file (type jpg)
 
-<use bar/8561.jpg> <bar/8881.jpg, id=228, 404.712pt x 303.534pt>
+<use bar/8561.jpg> <bar/8881.jpg, id=233, 404.712pt x 303.534pt>
 File: bar/8881.jpg Graphic file (type jpg)
 
-<use bar/8881.jpg> <bar/8911.jpg, id=229, 404.712pt x 303.534pt>
+<use bar/8881.jpg> <bar/8911.jpg, id=234, 404.712pt x 303.534pt>
 File: bar/8911.jpg Graphic file (type jpg)
 
-<use bar/8911.jpg> <bar/9705.jpg, id=230, 404.712pt x 303.534pt>
+<use bar/8911.jpg> <bar/9705.jpg, id=235, 404.712pt x 303.534pt>
 File: bar/9705.jpg Graphic file (type jpg)
 
-<use bar/9705.jpg> <bar/10816.jpg, id=231, 404.712pt x 303.534pt>
+<use bar/9705.jpg> <bar/10816.jpg, id=236, 404.712pt x 303.534pt>
 File: bar/10816.jpg Graphic file (type jpg)
 
 <use bar/10816.jpg>
@@ -652,28 +651,28 @@ Overfull \hbox (4.07904pt too wide) in paragraph at lines 363--375
  [] 
  []
 
-<map/72.png, id=232, 1608.0075pt x 1206.5075pt>
+<map/72.png, id=237, 1608.0075pt x 1206.5075pt>
 File: map/72.png Graphic file (type png)
  <use map/72.png>
-<map/77.png, id=233, 1608.0075pt x 1206.5075pt>
+<map/77.png, id=238, 1608.0075pt x 1206.5075pt>
 File: map/77.png Graphic file (type png)
  <use map/77.png>
-<map/78.png, id=234, 1608.0075pt x 1206.5075pt>
+<map/78.png, id=239, 1608.0075pt x 1206.5075pt>
 File: map/78.png Graphic file (type png)
  <use map/78.png>
-<map/79.png, id=235, 1608.0075pt x 1206.5075pt>
+<map/79.png, id=240, 1608.0075pt x 1206.5075pt>
 File: map/79.png Graphic file (type png)
  <use map/79.png>
-<map/82.png, id=236, 1608.0075pt x 1206.5075pt>
+<map/82.png, id=241, 1608.0075pt x 1206.5075pt>
 File: map/82.png Graphic file (type png)
  <use map/82.png>
-<map/83.png, id=237, 1608.0075pt x 1206.5075pt>
+<map/83.png, id=242, 1608.0075pt x 1206.5075pt>
 File: map/83.png Graphic file (type png)
  <use map/83.png>
-<map/84.png, id=238, 1608.0075pt x 1206.5075pt>
+<map/84.png, id=243, 1608.0075pt x 1206.5075pt>
 File: map/84.png Graphic file (type png)
  <use map/84.png>
-<map/91.png, id=239, 1608.0075pt x 1206.5075pt>
+<map/91.png, id=244, 1608.0075pt x 1206.5075pt>
 File: map/91.png Graphic file (type png)
  <use map/91.png>
 Overfull \hbox (4.81226pt too wide) in paragraph at lines 386--401
@@ -684,10 +683,10 @@ Overfull \hbox (4.81226pt too wide) in paragraph at lines 386--401
 page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 
-      [6 <./figure/PR-snow.jpg> <./figure/PR-nonsnow.jpg> <./bar/8560.jpg> <./b
-ar/8561.jpg> <./bar/8881.jpg> <./bar/8911.jpg> <./bar/9705.jpg> <./bar/10816.jp
-g>]
+l.18 \bibitem{fedorov2014snow}
+                               [6 <./figure/PR-snow.jpg> <./figure/PR-nonsnow.j
+pg> <./bar/8560.jpg> <./bar/8561.jpg> <./bar/8881.jpg> <./bar/8911.jpg> <./bar/
+9705.jpg> <./bar/10816.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
@@ -706,45 +705,49 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 
-FiXme Summary: Number of notes: 32,
+FiXme Summary: Number of notes: 27,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 0,
-(FiXme)        Total: 32.
+(FiXme)        Total: 27.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.286 \end{document}
+l.287 \end{document}
                      [8 <./imggrid/falseposi/6.jpg> <./imggrid/falseposi/7.jpg>
  <./imggrid/falseposi/8.jpg> <./imggrid/falseposi/9.jpg> <./imggrid/falseposi/1
 0.jpg> <./imggrid/falseposi/16.jpg> <./imggrid/falseposi/17.jpg> <./imggrid/fal
 seposi/18.jpg> <./imggrid/falseposi/19.jpg> <./imggrid/falseposi/20.jpg>]
-(./main.aux) ) 
+(./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5244 strings out of 256214
- 71080 string characters out of 1917012
- 141098 words of memory out of 1500000
- 8301 multiletter control sequences out of 10000+200000
+ 5248 strings out of 256214
+ 71141 string characters out of 1917012
+ 140208 words of memory out of 1500000
+ 8304 multiletter control sequences out of 10000+200000
  59001 words of font info for 83 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  39i,11n,60p,511b,434s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/f
-onts/type1/bluesky/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbxti
-10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fon
-ts/type1/bluesky/cm/cmmi9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr6.pfb
-></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type
-1/bluesky/cm/cmr9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmssbx10.pfb></u
-sr/share/texmf/fonts/type1/bluesky/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/b
-luesky/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti9.pfb></usr/sh
-are/texmf/fonts/type1/public/cmex/fmex9.pfb></usr/share/texmf/fonts/type1/urw/h
-elvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/sha
-re/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on main.pdf (8 pages, 16851053 bytes).
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/b
+luesky/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbxti10.pfb></usr
+/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/blu
+esky/cm/cmmi9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr6.pfb></usr/share
+/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/bluesky/cm
+/cmr9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmssbx10.pfb></usr/share/tex
+mf/fonts/type1/bluesky/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cm
+sy9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti9.pfb></usr/share/texmf/fo
+nts/type1/public/cmex/fmex9.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb
+8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fon
+ts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on main.pdf (8 pages, 16852405 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 131072)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 131072)
  429 words of extra memory for PDF output out of 10000 (max. 10000000)
 
