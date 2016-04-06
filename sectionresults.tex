@@ -5,11 +5,11 @@ and the results and evaluation below.
 
 \subsection{Snow Case}
 \subsubsection{Scene Classification}
-We are using the same hand-labeled dataset as in \fxnote{cite{workshop}}.
+We are using the same hand-labeled dataset as in ~\cite{wang2013observing}.
 Beyond combining visual features, 
 we build CNN visual model for our snow scene classification problem 
 by fine-tuning Imagenet pre-trained model with the 8000 training images. The best 
-performance in \fxnote{cite{workshop}} using visual features with SVM is $80.50\%$ acuracy.
+performance in ~\cite{wang2013observing} using visual features with SVM is $80.50\%$ acuracy.
 On the same testing set of 2000 images, our CNN model achieves $88.06\%$ accuracy as a significant 
 improvement. Details of comparison between performance of CNN model
  and other visual features are  are presented in Table ~\ref{tab:snow}. Therefore, we use this as our recognitiion model for final predictions.
@@ -26,7 +26,7 @@ scene.
 We now turn to present experimental resutls for estimating geo-temporal distributions of snowfall.
 
 \subsubsection{Snow Prediction on Cities}
-To compare with existing results in \fxnote{cite{workshop}} using tag based method,
+To compare with existing results in ~\cite{wang2013observing} using tag based method,
 we first test how well our image-content based method can predict snowfall on daily base at a local scale, 
 and in particular 
 for the same four U.S. metropolitan areas, New York City, Boston, Chicago and Philadelphia. 
@@ -45,7 +45,7 @@ in the following experiments.
 
 \subsubsection{Continental-scale Snow Prediction}
 Adding visual evidence, we reconstruct Satellite maps and 
-evaluate our model in continental scale. We follow the same metric in \fxnote{cite{www}} to produce 
+evaluate our model in continental scale. We follow the same metric in ~\cite{ecology2012www} to produce 
 estimation at resolution of $1 \times 1$ degree (roughly $100 \times 100 km^2$) square and 1 map for 
 every day in 2009 and 2010.
 
@@ -63,6 +63,7 @@ our case is the majority class which predicts now snow all the time.
 \begin{table}\centering
 \caption{\textbf{Performance of different features for snow detection using SVMs for classification and compared with CNN model.}}
 \label{tab:snow}
+\tiny
 \begin{tabular}{@{}lcr@{}}\toprule
 Feature & Kernel & Accuracy\\\midrule
 Random Baseline & --- & 50.0\%\\
@@ -78,12 +79,12 @@ CNN& -& \textbf{88.06\%}\\
 \end{table}
 
 
-\begin{figure*}[th!]
+\begin{figure}[th!]
 \begin{center}
 \vspace{-16pt}
 \begin{tabular}{cc}
- \includegraphics[width=0.4\textwidth]{figure/ROC-CNN-curves.jpg} &
-\includegraphics[width=0.4\textwidth]{figure/PR-CNN-curves.jpg} \\
+ \includegraphics[width=0.2\textwidth]{figure/ROC-CNN-curves.jpg} &
+\includegraphics[width=0.2\textwidth]{figure/PR-CNN-curves.jpg} \\
 \end{tabular}
 \end{center}
 \vspace{-8pt}
@@ -92,30 +93,36 @@ Snow classification results for different features and combinations, in terms of
 {\textit{(right):}} Precision-Recall curves for the task of retrieving snow images.
 }
 \label{fig:PR_ROC_snow}
-\end{figure*}
+\end{figure}
 
 
-\begin{table*}\centering
+\begin{table}\centering
 \caption {\textbf{Selected basic statistics during 2007 to 2010 for the 4 cities and results of the likelihood model using tags and vision evidence.}}
 \label{tab:city_conf_tag_vision} 
-\begin{tabular}{@{}crrrrrr@{}}\toprule
-City &  baseline & active user/day  & snow days &  tag confidence &  vision conf & tags conf and vision conf \\\midrule
+\tiny
+\begin{tabular}{@{}ccccccc@{}}\toprule
+City 
+& \multicolumn{1}{p{0.2cm}}{\centering naive\\baseline} 
+& \multicolumn{1}{p{0.8cm}}{\centering active\\user/day} 
+& \multicolumn{1}{p{0.3cm}}{\centering snow\\days} 
+&  \multicolumn{1}{p{0.8cm}}{\centering tag\\confidence} 
+&  \multicolumn{1}{p{0.7cm}}{\centering vision\\conf} 
+& \multicolumn{1}{p{1.4cm}}{\centering tag conf \&\\vision conf} 
+\\\midrule
 {NYC} & 85.00\% & 65.6 & 185 &90.42\%&90.29\% &92.34\%\\
 {Chicago} &72.80\% & 94.9 & 418 &94.12\% &93.16\% &95.08\%  \\
 {Boston} & 75.60\%& 59.7 & 373 &89.18\%&85.21\% & 91.23\% \\
 {Philly} & 80.50\% & 43.7 & 280 & 89.19\% &85.09\% & 89.19\%  \\
 \bottomrule
 \end{tabular}
-\vspace{-12pt}
-\end{table*}
+%\vspace{-12pt}
+\end{table}
 
 \begin{figure}
-%{\small{
 \begin{center}
-\includegraphics[width=0.22\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-snow.jpg}
-\includegraphics[width=0.22\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-nonsnow.jpg}
+\includegraphics[width=0.2\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-snow.jpg}
+\includegraphics[width=0.2\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-nonsnow.jpg}
 \end{center}
-%}}
 \vspace{-12pt}
 \caption{Precision and recall curve of snow prediction (left) and nonsnow (right) in continental scale.}
 \label{fig:snowcurve}
@@ -148,7 +155,7 @@ City &  baseline & active user/day  & snow days &  tag confidence &  vision conf
 Vegetation coverage is a more stable phenomenon, so we study this case in every 16 days period instead of daily base.
 Unlike snow scene that 
 tag feature is very discriminative, according 
-to \fxnote{cite{www}}, textual tag of greenery is highly misleading. 
+to ~\cite{ecology2012www}, textual tag of greenery is highly misleading. 
 Terms like ``tree'' or even ``leaf'' are not necessarily 
 indicating green color, but terms like ``green'' or 
 ``yellow'' could be used to describe a wild set of objects outside of vegetation. Moreover, while vegetation is 
@@ -173,8 +180,8 @@ we present a random sample of images in our vegetation dataset labeled as positi
 
 In continental-scale prediction, we only look at images on Flickr.com in year 2007 to 2010, with no tag limitation. 
 We filter out the photos with too unreasonable timestamps such as the taken time and uploading time is exactly the same.
-We only use images with high precision geotag according to the image metadata Flickr API provide \fxnote{cite url}. And we still process the 
-satellite ground truth the same way as in \fxnote{cite{www}}.
+We only use images with high precision geotag according to the image metadata. And we still process the 
+satellite ground truth the same way as in ~\cite{ecology2012www}.
 
 
 
@@ -238,23 +245,23 @@ The satellite ground truth, instead, is limited to cloud coverage and other sens
 
 
 \begin{figure}[th]
-{\small{
+{\tiny{
 \begin{center}
 \begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/6.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/7.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/8.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/9.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetposi/10.jpg} \\
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/6.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/7.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/8.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/9.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/10.jpg} \\
 \multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
-\\[-6pt]
+\\[1pt]
 \hline
-\\[-6pt]
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/6.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/7.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/8.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/9.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/datasetnega/10.jpg} \\
+\\[1pt]
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/6.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/7.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/8.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/9.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/10.jpg} \\
 \multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
 \end{tabular}
 \end{center}
@@ -268,6 +275,7 @@ Negative images like winter trees without leaves, or indoor images capturing a p
 \begin{table}\centering
 \caption {\textbf{Results for our visual models for vegetation.}}
 \label{tab:veg_img_classifier} 
+\tiny
 \begin{tabular}{@{}cr@{}}\toprule
 Visual feature &  Accuracy\\\midrule
 Random Baseline & 50.00\%\\
@@ -293,23 +301,23 @@ CNN\% &  88.0\%\\
 \addvspace{5mm}
 
 \begin{figure}[th]
-{\small{
+{\tiny{
 \begin{center}
 \begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/6.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/7.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/8.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/9.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/10.jpg} \\
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/6.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/7.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/8.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/9.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/10.jpg} \\
 %\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
 \\[-6pt]
 \hline
 \\[-6pt]
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/16.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/17.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/18.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/19.jpg} &
-\includegraphics[width=0.08\textwidth, height=0.5in]{imggrid/falseposi/20.jpg} \\
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/16.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/17.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/18.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/19.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/20.jpg} \\
 %\multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
 \end{tabular}
 \end{center}
@@ -322,16 +330,14 @@ CNN\% &  88.0\%\\
 
 % bar plot of 2 places
 \begin{figure}
-%{\small{
+%{\tiny{
 \begin{center}
 \begin{tabular}{ccc}
 \includegraphics[width=0.14\textwidth]{bar/8560.jpg} &
 \includegraphics[width=0.14\textwidth]{bar/8561.jpg} &
-%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
 \includegraphics[width=0.14\textwidth]{bar/8881.jpg} \\
 \includegraphics[width=0.14\textwidth]{bar/8911.jpg} &
 \includegraphics[width=0.14\textwidth]{bar/9705.jpg} &
-%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
 \includegraphics[width=0.14\textwidth]{bar/10816.jpg} \\
 %(a) & (b)\\
 \\
@@ -345,7 +351,7 @@ CNN\% &  88.0\%\\
 \end{figure}
 
 \begin{figure}
-%{\small{
+%{\tiny{
 \begin{center}
 \begin{tabular}{cccc}
 \includegraphics[width=0.10\textwidth]{map/72.png} &
