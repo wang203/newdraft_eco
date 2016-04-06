@@ -1,29 +1,46 @@
 \section{experiments and results}
+
+In this paper, we propose an effective system to estimate the presence or absence 
+of a given ecology phenomenon (like green leaf plants) 
+from visual contents of public-shared photographs. First, we employ the state-of-the-art 
+computer vision technique to detect the target phenomenon. Then according to the visual evidence 
+and the corresponding timestamp and geo-tag of each image, we adopt the likelihood model in ~\cite{ecology2012www}
+aggregating the large scale, imperfect information to reconstruct the satellite maps.
+
+In Scene classification, we also employ the current state-of-the-art algorithm, 
+the Convolutional Neural Network (CNN) pre-trained on ImageNet dataset. 
+The key idea behind this approach is that instead of selecting and combining hand designed features 
+with limited parameters to fit each recognition task, it learns hierarchical image feature directly 
+for target objects.
+We fine-tune it with our 
+hand-labeled dataset for each experiment case and further improve the performance illustrated below.
+
+
 We study two important ecology phenomena, for each time period and location, 
 wether there is snowfall and are there many plants with green leaves? We discuss the experimental setup 
 and the results and evaluation below.
 
 \subsection{Snow Case}
 \subsubsection{Scene Classification}
-We are using the same hand-labeled dataset as in ~\cite{wang2013observing}.
+%We are using the same hand-labeled dataset as in ~\cite{wang2013observing}.
 Beyond combining visual features, 
 we build CNN visual model for our snow scene classification problem 
-by fine-tuning Imagenet pre-trained model with the 8000 training images. The best 
-performance in ~\cite{wang2013observing} using visual features with SVM is $80.50\%$ acuracy.
+by fine-tuning Imagenet pre-trained model with the 8000 training images labeled for snow scene~\cite{wang2013observing}. The best 
+performance in ~\cite{wang2013observing} using visual features with SVM is $80.50\%$ accuracy.
 On the same testing set of 2000 images, our CNN model achieves $88.06\%$ accuracy as a significant 
 improvement. Details of comparison between performance of CNN model
- and other visual features are  are presented in Table ~\ref{tab:snow}. Therefore, we use this as our recognitiion model for final predictions.
+ and other visual features are presented in Table ~\ref{tab:snow}. Therefore, we use this as our recognition model for final predictions.
 
 Figure ~\ref{fig:PR_ROC_snow} compares classification performance of CNN with 
 individual visual features and their combination in terms of an ROC curve, 
 as well as a precision-recall curve in which the task is to retrieve photos containing snow.
-The precision-recall curve of CNN shows that at about $50\%$ recall, precision os very near to $100\%$, 
+The precision-recall curve of CNN shows that at about $50\%$ recall, precision is very near to $100\%$, 
 while even at $80\%$ recall, precision is still above $90\%$. This is a nice feature because 
 in many applications, it may not be necessary to correctly 
 classify all images, but instead it is important to find some images that most likely contain snowy 
 scene.
 
-We now turn to present experimental resutls for estimating geo-temporal distributions of snowfall.
+We now turn to present experimental results for estimating geo-temporal distributions of snowfall.
 
 \subsubsection{Snow Prediction on Cities}
 To compare with existing results in ~\cite{wang2013observing} using tag based method,
@@ -32,7 +49,7 @@ and in particular
 for the same four U.S. metropolitan areas, New York City, Boston, Chicago and Philadelphia. 
 Table~\ref{tab:city_conf_tag_vision} 
 shows some basic statistics for these 4 cities, and results of these classifiers. 
-Best preformance obtained when we combine 
+Best performance obtained when we combine 
 the confidence scores of tags and visual model based on CNN. For each of the method, 
 Chicago gives the highest accuracy while Philadelphia gets the lowest accuracy. 
 It's reasonable considering that Chicago has the most active Flickr users per
@@ -89,7 +106,7 @@ CNN& -& \textbf{88.06\%}\\
 \end{center}
 \vspace{-8pt}
 \caption{
-Snow classification results for different features and combinations, in terms of {\textit{(left):}} ROC curves for the task of classifying snow vs. non-snow images; and 
+Snow classification results for different features and combination, in terms of {\textit{(left):}} ROC curves for the task of classifying snow vs. non-snow images; and 
 {\textit{(right):}} Precision-Recall curves for the task of retrieving snow images.
 }
 \label{fig:PR_ROC_snow}
@@ -186,11 +203,48 @@ satellite ground truth the same way as in ~\cite{ecology2012www}.
 
 
 \subsubsection{Scene Classification}
-We hand-labeled a seperate dataset sampled from Flickr 
-Compare to snow scene, vegetation has its strong and probably ``unique'' color and texture to be described in traditional visual 
-features, while it does not make such a differenc to CNN as a data driven model. Combining color SIFT and color GIST features yields a 
-compelling prediction accuracy of $85.90\%$ though CNN still gives a higher performance of $88.00\%$. We present detail performance in Table 
+We hand-labeled a separate dataset for greenery scene.
+Compare to snow scene recognition,
+vegetation has the signature green color that the  
+biologists are very interested in during exactly which time period they are green. 
+Thus it's very important 
+to find out when it turns from yellow to green and when does it turns back to yellow.
+The leaves of plants also have distinctive visual texture. 
+Thus, visual features capture both color and texture information are our best choice.
+So we employ color SIFT feature to analyze the local gradient distribution. 
+And we also extract color GIST feature to describe texture feature and global context. 
+
+\xhdr{Color SIFT histogram.}
+We extract dense SIFT feature ~\cite{lowe1999object} on each of the RGB color plane, and concatenate them to 
+build color SIFT feature. The dense SIFT feature is extracted from every 2 pixels by 2 pixels bin, 
+with a step size of 5 pixels. In this way, we achieve representative key points and reasonable 
+computation complex. 
+
+From training data set, We build 2000 dimensional centers of color SIFT feature 
+using K-means clustering. With these centers, a 2000 dimensional histogram is built 
+from all the key points of each image.
+
+\xhdr{Color GIST.} Similarly, we also extract GIST features on RGB color channel respectively.
+\fxnote{From now on to the end of this paragraph, 
+it's the same as our workshop paper. Could you help me to give a shorter global
+description?}
+GIST feature capture coarse texture
+and scene layout by applying a Gabor filter bank followed by
+down-sampling ~\cite{oliva2001modeling}. Our variant produces a
+1536-dimensional vector and operates on color planes. Scaling
+images to have square aspect ratios before computing GIST improved
+classification results significantly ~\cite{douze2009evaluation}.
+
+By concatenating color SIFT histogram and color GIST feature, 
+a model is trained and tested with SVM using RBF kernel. It achieves accuracy of $85.90\%$ 
+though CNN still gives a higher performance of $88.00\%$. We present detail performance in Table 
 ~\ref{tab:veg_img_classifier}.
+
+
+%Compare to snow scene, vegetation has its strong and probably ``unique'' color and texture to be described in traditional visual 
+%features, while it does not make such a difference to CNN as a data driven model. Combining color SIFT and color GIST features yields a 
+%compelling prediction accuracy of $85.90\%$ though CNN still gives a higher performance of $88.00\%$. We present detail performance in Table 
+%~\ref{tab:veg_img_classifier}.
 
 \subsubsection{Vegetation Coverage over Time and Space}
 We consider North America area as in snow experiments. From images in 2007 and 2008, 
@@ -228,7 +282,7 @@ we show some examples of images in false positive bins.
 For each single location, we can find out when exactly did the leaves turn yellow as well as when
 did the leaves turn back to green. 
 Figure ~\ref{fig:placeinbar} shows vegetation coverage of 6 places over 2009 and 2010. 
-Prediction results on top usually have more data available than groud truth on the bottom. 
+Prediction results on top usually have more data available than ground truth on the bottom. 
 And we can see the ground truth is likely missing at the time when the leaves change color. 
 
 

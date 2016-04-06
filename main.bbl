@@ -9,6 +9,11 @@ J.~Bollen, H.~Mao, and X.-J. Zeng.
 \newblock Twitter mood predicts the stock market.
 \newblock {\em Journal of Computational Science}, 2(1):1--8, 2011.
 
+\bibitem{douze2009evaluation}
+M.~Douze, H.~Jegou, H.~Sandhawalia, L.~Amsaleg, and C.~Schmid.
+\newblock Evaluation of gist descriptors for web-scale image search.
+\newblock In {\em ICIVR}, 2009.
+
 \bibitem{fedorov2015snowwatch}
 R.~Fedorov, P.~Fraternali, C.~Pasini, and M.~Tagliasacchi.
 \newblock Snowwatch: Snow monitoring through acquisition and analysis of
@@ -47,6 +52,12 @@ L.-J. Li, D.~A. Shamma, X.~Kong, S.~Jafarpour, R.~Van~Zwol, and X.~Wang.
 \newblock {\em ACM Transactions on Multimedia Computing, Communications, and
   Applications (TOMM)}, 12(1):3, 2015.
 
+\bibitem{lowe1999object}
+D.~G. Lowe.
+\newblock Object recognition from local scale-invariant features.
+\newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
+  international conference on}, volume~2, pages 1150--1157. Ieee, 1999.
+
 \bibitem{murdock}
 C.~Murdock, N.~Jacobs, and R.~Pless.
 \newblock {Webcam2Satellite}: Estimating cloud maps from webcam imagery.
@@ -64,6 +75,12 @@ H.~Oba, M.~Hirota, R.~Chbeir, H.~Ishikawa, and S.~Yokoyama.
   photographs.
 \newblock In {\em Multimedia (ISM), 2014 IEEE International Symposium on},
   pages 320--327. IEEE, 2014.
+
+\bibitem{oliva2001modeling}
+A.~Oliva and A.~Torralba.
+\newblock Modeling the shape of the scene: A holistic representation of the
+  spatial envelope.
+\newblock {\em IJCV}, 42(3):145--175, 2001.
 
 \bibitem{omori2014can}
 M.~Omori, M.~Hirota, H.~Ishikawa, and S.~Yokoyama.
