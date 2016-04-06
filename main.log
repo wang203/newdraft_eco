@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  6 APR 2016 15:25
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.9.24)  6 APR 2016 15:37
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -507,178 +507,177 @@ File: figure/PR-snow.jpg Graphic file (type jpg)
 File: figure/PR-nonsnow.jpg Graphic file (type jpg)
 
 <use figure/PR-nonsnow.jpg>
-Overfull \hbox (7.71309pt too wide) in paragraph at lines 187--190
-\T1/aer/m/it/9 "Out-door Green-ery","Outdoor non-Greenery","Indoor","Other-
+<imggrid/datasetposi/6.jpg, id=161, 68.55325pt x 103.24286pt>
+File: imggrid/datasetposi/6.jpg Graphic file (type jpg)
+
+<use imggrid/datasetposi/6.jpg>
+<imggrid/datasetposi/7.jpg, id=162, 150.5625pt x 100.27463pt>
+File: imggrid/datasetposi/7.jpg Graphic file (type jpg)
+
+<use imggrid/datasetposi/7.jpg>
+<imggrid/datasetposi/8.jpg, id=163, 100.375pt x 66.649pt>
+File: imggrid/datasetposi/8.jpg Graphic file (type jpg)
+
+<use imggrid/datasetposi/8.jpg>
+<imggrid/datasetposi/9.jpg, id=164, 120.45pt x 85.7604pt>
+File: imggrid/datasetposi/9.jpg Graphic file (type jpg)
+
+<use imggrid/datasetposi/9.jpg>
+<imggrid/datasetposi/10.jpg, id=165, 90.3375pt x 60.7068pt>
+File: imggrid/datasetposi/10.jpg Graphic file (type jpg)
+
+<use imggrid/datasetposi/10.jpg>
+<imggrid/datasetnega/6.jpg, id=166, 80.2197pt x 120.45pt>
+File: imggrid/datasetnega/6.jpg Graphic file (type jpg)
+
+<use imggrid/datasetnega/6.jpg>
+<imggrid/datasetnega/7.jpg, id=167, 376.40625pt x 237.88875pt>
+File: imggrid/datasetnega/7.jpg Graphic file (type jpg)
+
+<use imggrid/datasetnega/7.jpg>
+<imggrid/datasetnega/8.jpg, id=168, 150.5625pt x 100.57574pt>
+File: imggrid/datasetnega/8.jpg Graphic file (type jpg)
+
+<use imggrid/datasetnega/8.jpg>
+<imggrid/datasetnega/9.jpg, id=169, 501.875pt x 376.40625pt>
+File: imggrid/datasetnega/9.jpg Graphic file (type jpg)
+
+<use imggrid/datasetnega/9.jpg>
+<imggrid/datasetnega/10.jpg, id=170, 501.875pt x 334.24875pt>
+File: imggrid/datasetnega/10.jpg Graphic file (type jpg)
+
+<use imggrid/datasetnega/10.jpg>
+<figure/curvevege.jpg, id=171, 1124.2pt x 421.575pt>
+File: figure/curvevege.jpg Graphic file (type jpg)
+
+<use figure/curvevege.jpg>
+<imggrid/falseposi/6.jpg, id=172, 376.40625pt x 281.55188pt>
+File: imggrid/falseposi/6.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/6.jpg>
+<imggrid/falseposi/7.jpg, id=173, 376.40625pt x 281.55188pt>
+File: imggrid/falseposi/7.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/7.jpg>
+<imggrid/falseposi/8.jpg, id=174, 376.40625pt x 281.55188pt>
+File: imggrid/falseposi/8.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/8.jpg>
+<imggrid/falseposi/9.jpg, id=175, 501.875pt x 376.40625pt>
+File: imggrid/falseposi/9.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/9.jpg>
+<imggrid/falseposi/10.jpg, id=176, 501.875pt x 335.2525pt>
+File: imggrid/falseposi/10.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/10.jpg>
+<imggrid/falseposi/16.jpg, id=177, 157.10869pt x 117.83153pt>
+File: imggrid/falseposi/16.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/16.jpg>
+<imggrid/falseposi/17.jpg, id=178, 501.875pt x 376.40625pt>
+File: imggrid/falseposi/17.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/17.jpg>
+<imggrid/falseposi/18.jpg, id=179, 200.75pt x 150.5625pt>
+File: imggrid/falseposi/18.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/18.jpg>
+<imggrid/falseposi/19.jpg, id=180, 376.40625pt x 501.875pt>
+File: imggrid/falseposi/19.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/19.jpg>
+<imggrid/falseposi/20.jpg, id=181, 501.875pt x 335.2525pt>
+File: imggrid/falseposi/20.jpg Graphic file (type jpg)
+
+<use imggrid/falseposi/20.jpg> <bar/8560.jpg, id=182, 404.712pt x 303.534pt>
+File: bar/8560.jpg Graphic file (type jpg)
+
+<use bar/8560.jpg> <bar/8561.jpg, id=183, 404.712pt x 303.534pt>
+File: bar/8561.jpg Graphic file (type jpg)
+
+<use bar/8561.jpg> <bar/8881.jpg, id=184, 404.712pt x 303.534pt>
+File: bar/8881.jpg Graphic file (type jpg)
+
+<use bar/8881.jpg> <bar/8911.jpg, id=185, 404.712pt x 303.534pt>
+File: bar/8911.jpg Graphic file (type jpg)
+
+<use bar/8911.jpg> <bar/9705.jpg, id=186, 404.712pt x 303.534pt>
+File: bar/9705.jpg Graphic file (type jpg)
+
+<use bar/9705.jpg> <bar/10816.jpg, id=187, 404.712pt x 303.534pt>
+File: bar/10816.jpg Graphic file (type jpg)
+
+<use bar/10816.jpg>
+Overfull \hbox (4.07904pt too wide) in paragraph at lines 263--273
+ [] 
+ []
+
+<map/72.png, id=188, 1608.0075pt x 1206.5075pt>
+File: map/72.png Graphic file (type png)
+ <use map/72.png>
+<map/77.png, id=189, 1608.0075pt x 1206.5075pt>
+File: map/77.png Graphic file (type png)
+ <use map/77.png>
+<map/78.png, id=190, 1608.0075pt x 1206.5075pt>
+File: map/78.png Graphic file (type png)
+ <use map/78.png>
+<map/79.png, id=191, 1608.0075pt x 1206.5075pt>
+File: map/79.png Graphic file (type png)
+ <use map/79.png>
+<map/82.png, id=192, 1608.0075pt x 1206.5075pt>
+File: map/82.png Graphic file (type png)
+ <use map/82.png>
+<map/83.png, id=193, 1608.0075pt x 1206.5075pt>
+File: map/83.png Graphic file (type png)
+ <use map/83.png>
+<map/84.png, id=194, 1608.0075pt x 1206.5075pt>
+File: map/84.png Graphic file (type png)
+ <use map/84.png>
+<map/91.png, id=195, 1608.0075pt x 1206.5075pt>
+File: map/91.png Graphic file (type png)
+ <use map/91.png>
+Overfull \hbox (4.81226pt too wide) in paragraph at lines 284--299
+ [] 
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.205 \subsubsection
-                    {Scene Classification} [3 <./figure/ROC-CNN-curves.jpg> <./
-figure/PR-CNN-curves.jpg>]
+l.322 
+       [3 <./figure/PR-snow.jpg> <./figure/PR-nonsnow.jpg> <./figure/ROC-CNN-cu
+rves.jpg> <./figure/PR-CNN-curves.jpg> <./imggrid/datasetposi/6.jpg> <./imggrid
+/datasetposi/7.jpg> <./imggrid/datasetposi/8.jpg> <./imggrid/datasetposi/9.jpg>
+ <./imggrid/datasetposi/10.jpg> <./imggrid/datasetnega/6.jpg> <./imggrid/datase
+tnega/7.jpg> <./imggrid/datasetnega/8.jpg> <./imggrid/datasetnega/9.jpg> <./img
+grid/datasetnega/10.jpg>]
+Overfull \hbox (7.71309pt too wide) in paragraph at lines 326--329
+\T1/aer/m/it/9 "Out-door Green-ery","Outdoor non-Greenery","Indoor","Other-
+ []
+
 FiXme Note: 'From now on to the end of this paragraph, it's the same as our wor
 kshop paper. Could you help me to give a shorter global description?' on input 
-line 230.
-
-<imggrid/datasetposi/6.jpg, id=185, 68.55325pt x 103.24286pt>
-File: imggrid/datasetposi/6.jpg Graphic file (type jpg)
-
-<use imggrid/datasetposi/6.jpg>
-<imggrid/datasetposi/7.jpg, id=186, 150.5625pt x 100.27463pt>
-File: imggrid/datasetposi/7.jpg Graphic file (type jpg)
-
-<use imggrid/datasetposi/7.jpg>
-<imggrid/datasetposi/8.jpg, id=187, 100.375pt x 66.649pt>
-File: imggrid/datasetposi/8.jpg Graphic file (type jpg)
-
-<use imggrid/datasetposi/8.jpg>
-<imggrid/datasetposi/9.jpg, id=188, 120.45pt x 85.7604pt>
-File: imggrid/datasetposi/9.jpg Graphic file (type jpg)
-
-<use imggrid/datasetposi/9.jpg>
-<imggrid/datasetposi/10.jpg, id=189, 90.3375pt x 60.7068pt>
-File: imggrid/datasetposi/10.jpg Graphic file (type jpg)
-
-<use imggrid/datasetposi/10.jpg>
-<imggrid/datasetnega/6.jpg, id=190, 80.2197pt x 120.45pt>
-File: imggrid/datasetnega/6.jpg Graphic file (type jpg)
-
-<use imggrid/datasetnega/6.jpg>
-<imggrid/datasetnega/7.jpg, id=191, 376.40625pt x 237.88875pt>
-File: imggrid/datasetnega/7.jpg Graphic file (type jpg)
-
-<use imggrid/datasetnega/7.jpg>
-<imggrid/datasetnega/8.jpg, id=192, 150.5625pt x 100.57574pt>
-File: imggrid/datasetnega/8.jpg Graphic file (type jpg)
-
-<use imggrid/datasetnega/8.jpg>
-<imggrid/datasetnega/9.jpg, id=193, 501.875pt x 376.40625pt>
-File: imggrid/datasetnega/9.jpg Graphic file (type jpg)
-
-<use imggrid/datasetnega/9.jpg>
-<imggrid/datasetnega/10.jpg, id=194, 501.875pt x 334.24875pt>
-File: imggrid/datasetnega/10.jpg Graphic file (type jpg)
-
-<use imggrid/datasetnega/10.jpg>
-<figure/curvevege.jpg, id=195, 1124.2pt x 421.575pt>
-File: figure/curvevege.jpg Graphic file (type jpg)
-
-<use figure/curvevege.jpg>
-<imggrid/falseposi/6.jpg, id=196, 376.40625pt x 281.55188pt>
-File: imggrid/falseposi/6.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/6.jpg>
-<imggrid/falseposi/7.jpg, id=197, 376.40625pt x 281.55188pt>
-File: imggrid/falseposi/7.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/7.jpg>
-<imggrid/falseposi/8.jpg, id=198, 376.40625pt x 281.55188pt>
-File: imggrid/falseposi/8.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/8.jpg>
-<imggrid/falseposi/9.jpg, id=199, 501.875pt x 376.40625pt>
-File: imggrid/falseposi/9.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/9.jpg>
-<imggrid/falseposi/10.jpg, id=200, 501.875pt x 335.2525pt>
-File: imggrid/falseposi/10.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/10.jpg>
-<imggrid/falseposi/16.jpg, id=201, 157.10869pt x 117.83153pt>
-File: imggrid/falseposi/16.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/16.jpg>
-<imggrid/falseposi/17.jpg, id=202, 501.875pt x 376.40625pt>
-File: imggrid/falseposi/17.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/17.jpg>
-<imggrid/falseposi/18.jpg, id=203, 200.75pt x 150.5625pt>
-File: imggrid/falseposi/18.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/18.jpg>
-<imggrid/falseposi/19.jpg, id=204, 376.40625pt x 501.875pt>
-File: imggrid/falseposi/19.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/19.jpg>
-<imggrid/falseposi/20.jpg, id=205, 501.875pt x 335.2525pt>
-File: imggrid/falseposi/20.jpg Graphic file (type jpg)
-
-<use imggrid/falseposi/20.jpg>pdfTeX warning (ext4): destination with the same 
-identifier (name{page.}) has been already used, duplicate ignored
+line 369.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.383 \end{figure}
-                   [4 <./figure/PR-snow.jpg> <./figure/PR-nonsnow.jpg>]
-<bar/8560.jpg, id=219, 404.712pt x 303.534pt>
-File: bar/8560.jpg Graphic file (type jpg)
- <use bar/8560.jpg>
-<bar/8561.jpg, id=220, 404.712pt x 303.534pt>
-File: bar/8561.jpg Graphic file (type jpg)
- <use bar/8561.jpg>
-<bar/8881.jpg, id=221, 404.712pt x 303.534pt>
-File: bar/8881.jpg Graphic file (type jpg)
- <use bar/8881.jpg>
-<bar/8911.jpg, id=222, 404.712pt x 303.534pt>
-File: bar/8911.jpg Graphic file (type jpg)
- <use bar/8911.jpg>
-<bar/9705.jpg, id=223, 404.712pt x 303.534pt>
-File: bar/9705.jpg Graphic file (type jpg)
- <use bar/9705.jpg>
-<bar/10816.jpg, id=224, 404.712pt x 303.534pt>
-File: bar/10816.jpg Graphic file (type jpg)
- <use bar/10816.jpg>
-Overfull \hbox (4.07904pt too wide) in paragraph at lines 389--399
- [] 
- []
-
-<map/72.png, id=225, 1608.0075pt x 1206.5075pt>
-File: map/72.png Graphic file (type png)
- <use map/72.png>
-<map/77.png, id=226, 1608.0075pt x 1206.5075pt>
-File: map/77.png Graphic file (type png)
- <use map/77.png>
-<map/78.png, id=227, 1608.0075pt x 1206.5075pt>
-File: map/78.png Graphic file (type png)
- <use map/78.png>
-<map/79.png, id=228, 1608.0075pt x 1206.5075pt>
-File: map/79.png Graphic file (type png)
- <use map/79.png>
-<map/82.png, id=229, 1608.0075pt x 1206.5075pt>
-File: map/82.png Graphic file (type png)
- <use map/82.png>
-<map/83.png, id=230, 1608.0075pt x 1206.5075pt>
-File: map/83.png Graphic file (type png)
- <use map/83.png>
-<map/84.png, id=231, 1608.0075pt x 1206.5075pt>
-File: map/84.png Graphic file (type png)
- <use map/84.png>
-<map/91.png, id=232, 1608.0075pt x 1206.5075pt>
-File: map/91.png Graphic file (type png)
- <use map/91.png>
-Overfull \hbox (4.81226pt too wide) in paragraph at lines 410--425
- [] 
- []
-
+l.376 
+       [4 <./figure/curvevege.jpg> <./imggrid/falseposi/6.jpg> <./imggrid/false
+posi/7.jpg> <./imggrid/falseposi/8.jpg> <./imggrid/falseposi/9.jpg> <./imggrid/
+falseposi/10.jpg> <./imggrid/falseposi/16.jpg> <./imggrid/falseposi/17.jpg> <./
+imggrid/falseposi/18.jpg> <./imggrid/falseposi/19.jpg> <./imggrid/falseposi/20.
+jpg> <./bar/8560.jpg> <./bar/8561.jpg> <./bar/8881.jpg> <./bar/8911.jpg> <./bar
+/9705.jpg> <./bar/10816.jpg> <./map/72.png (PNG copy)> <./map/77.png (PNG copy)
+> <./map/78.png (PNG copy)> <./map/79.png (PNG copy)> <./map/82.png (PNG copy)>
+ <./map/83.png (PNG copy)> <./map/84.png (PNG copy)> <./map/91.png (PNG copy)>]
 )pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.274 \clearpage
-                 [5 <./imggrid/datasetposi/6.jpg> <./imggrid/datasetposi/7.jpg>
- <./imggrid/datasetposi/8.jpg> <./imggrid/datasetposi/9.jpg> <./imggrid/dataset
-posi/10.jpg> <./imggrid/datasetnega/6.jpg> <./imggrid/datasetnega/7.jpg> <./img
-grid/datasetnega/8.jpg> <./imggrid/datasetnega/9.jpg> <./imggrid/datasetnega/10
-.jpg> <./figure/curvevege.jpg> <./imggrid/falseposi/6.jpg> <./imggrid/falseposi
-/7.jpg> <./imggrid/falseposi/8.jpg> <./imggrid/falseposi/9.jpg> <./imggrid/fals
-eposi/10.jpg> <./imggrid/falseposi/16.jpg> <./imggrid/falseposi/17.jpg> <./imgg
-rid/falseposi/18.jpg> <./imggrid/falseposi/19.jpg> <./imggrid/falseposi/20.jpg>
- <./bar/8560.jpg> <./bar/8561.jpg> <./bar/8881.jpg> <./bar/8911.jpg> <./bar/970
-5.jpg> <./bar/10816.jpg> <./map/72.png (PNG copy)> <./map/77.png (PNG copy)> <.
-/map/78.png (PNG copy)> <./map/79.png (PNG copy)> <./map/82.png (PNG copy)> <./
-map/83.png (PNG copy)> <./map/84.png (PNG copy)> <./map/91.png (PNG copy)>]
-(./main.bbl)
+                 [5] (./main.bbl)
 
 FiXme Summary: Number of notes: 12,
 (FiXme)        Number of warnings: 0,
@@ -697,7 +696,7 @@ l.288 \end{document}
 Here is how much of TeX's memory you used:
  5244 strings out of 256214
  71051 string characters out of 1917012
- 139187 words of memory out of 1500000
+ 145619 words of memory out of 1500000
  8298 multiletter control sequences out of 10000+200000
  64290 words of font info for 92 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
@@ -714,7 +713,7 @@ hare/texmf/fonts/type1/bluesky/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/blues
 ky/cm/cmti9.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
 re/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 16848057 bytes).
+Output written on main.pdf (6 pages, 16848077 bytes).
 PDF statistics:
  306 PDF objects out of 1000 (max. 8388607)
  52 named destinations out of 1000 (max. 131072)

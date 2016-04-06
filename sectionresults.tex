@@ -77,7 +77,7 @@ our case is the majority class which predicts now snow all the time.
 
 
 
-\begin{table}\centering
+\begin{table}[th!]\centering
 \caption{\textbf{Performance of different features for snow detection using SVMs for classification and compared with CNN model.}}
 \label{tab:snow}
 \tiny
@@ -90,7 +90,7 @@ Tiny & RBF & 74.3\%\\
 Spatial Color Moments & RBF & 76.2\%\\
 Spatial pyramid LBP & RBF &\textbf{77.0\%}\\\midrule
 All features  & linear & \textbf{80.5\%}\\
-CNN& -& \textbf{88.06\%}\\
+CNN& -& \textbf{88.1\%}\\
 \bottomrule\\
 \end{tabular}
 \end{table}
@@ -113,7 +113,7 @@ Snow classification results for different features and combination, in terms of 
 \end{figure}
 
 
-\begin{table}\centering
+\begin{table}[th!]\centering
 \caption {\textbf{Selected basic statistics during 2007 to 2010 for the 4 cities and results of the likelihood model using tags and vision evidence.}}
 \label{tab:city_conf_tag_vision} 
 \tiny
@@ -135,7 +135,7 @@ City
 %\vspace{-12pt}
 \end{table}
 
-\begin{figure}
+\begin{figure}[th!]
 \begin{center}
 \includegraphics[width=0.2\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-snow.jpg}
 \includegraphics[width=0.2\textwidth,clip,trim=0.4in 0 0.8in 0]{figure/PR-nonsnow.jpg}
@@ -169,6 +169,145 @@ City
 
 
 \subsection{Vegetation Case}
+
+
+\begin{figure}[th!]
+{\tiny{
+\begin{center}
+\begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/6.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/7.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/8.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/9.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/10.jpg} \\
+\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
+\\[1pt]
+\hline
+\\[1pt]
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/6.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/7.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/8.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/9.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/10.jpg} \\
+\multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
+\end{tabular}
+\end{center}
+}}
+\vspace{-6pt}
+\caption{Random images from our hand-labeled dataset. Public sharing images are various in quality, contents, illumination and view angle.
+Negative images like winter trees without leaves, or indoor images capturing a photo of forest are more confusing.}
+\label{fig:dataset}
+\end{figure}
+
+\begin{table}[th!]
+\centering
+\caption {\textbf{Results for our visual models for vegetation.}}
+\label{tab:veg_img_classifier} 
+\tiny
+\begin{tabular}{@{}cr@{}}\toprule
+Visual feature &  Accuracy\\\midrule
+Random Baseline & 50.00\%\\
+Color SIFT & 78.10\%\\
+Color GIST & 82.58\% \\
+SIFT and GIST& 85.90\% \\
+CNN\% &  88.00\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[th!]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figure/curvevege.jpg}
+\end{center}
+%}}
+\vspace{-6pt}
+\addvspace{2mm}
+\caption{Precision and recall curve of vegetation prediction in continental scale.}
+\label{fig:curvevege}
+\vspace{-6pt}
+\end{figure}
+\addvspace{5mm}
+
+\begin{figure}[th!]
+{\tiny{
+\begin{center}
+\begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/6.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/7.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/8.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/9.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/10.jpg} \\
+%\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
+\\[-6pt]
+\hline
+\\[-6pt]
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/16.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/17.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/18.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/19.jpg} &
+\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/20.jpg} \\
+%\multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
+\end{tabular}
+\end{center}
+}}
+\vspace{-6pt}
+\caption{In vegetation detection over North America in 2009 and 2010, among all false positive bins, there are 47 images that are predicted as greenery. And these images are the reason these bins are predicted as green. Here are some random selected examples of the green images.}
+\label{fig:falseposi}
+\vspace{-6pt}
+\end{figure}
+
+% bar plot of 2 places
+\begin{figure}[th!]
+%{\tiny{
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics[width=0.14\textwidth]{bar/8560.jpg} &
+\includegraphics[width=0.14\textwidth]{bar/8561.jpg} &
+\includegraphics[width=0.14\textwidth]{bar/8881.jpg} \\
+\includegraphics[width=0.14\textwidth]{bar/8911.jpg} &
+\includegraphics[width=0.14\textwidth]{bar/9705.jpg} &
+\includegraphics[width=0.14\textwidth]{bar/10816.jpg} \\
+%(a) & (b)\\
+\\
+\end{tabular}
+\end{center}
+%}}
+\vspace{-24pt}
+\caption{Yellow bars show non-greenery at that time. Blue bars represent greenery. Prediction results on top shows 6 random places comparing to satellite ground truth. The ground truth on the bottom tends to disappear when leaves are turning yellow or green.}
+\label{fig:placeinbar}
+\vspace{-12pt}
+\end{figure}
+
+\begin{figure}[th!]
+%{\tiny{
+\begin{center}
+\begin{tabular}{cccc}
+\includegraphics[width=0.10\textwidth]{map/72.png} &
+\includegraphics[width=0.10\textwidth]{map/77.png} &
+\includegraphics[width=0.10\textwidth]{map/78.png} &
+%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
+\includegraphics[width=0.10\textwidth]{map/79.png}  \\
+Mar, 6th&May, 25th&Jun, 10th&Jun, 26th\\
+\includegraphics[width=0.10\textwidth]{map/82.png} &
+\includegraphics[width=0.10\textwidth]{map/83.png} &
+\includegraphics[width=0.10\textwidth]{map/84.png} &
+%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
+\includegraphics[width=0.10\textwidth]{map/91.png}  \\
+Aug, 13th&Aug, 29th&Sep, 14th&Dec 19th\\
+\\
+\end{tabular}
+\end{center}
+%}}
+\vspace{-24pt}
+\caption{%On two 16-days time period, end of August on the left and during Christmas on the right, we show the confusion matrix map here. Orange bins are true positive; yellow bins are false negative; blue bins are false positive; and black bins are true negative.
+We use prediction results to recreate vegetation coverage maps for each 16-days period. There are 8 maps picked in 2010. The dates under each map are the starting date of each 16-days period.
+Orange bins represent true positive; blue bins are false positives; yellow bins are true negatives and black bins are false negatives. }
+\label{fig:map}
+\vspace{-12pt}
+\end{figure}
+
+
+
 Vegetation coverage is a more stable phenomenon, so we study this case in every 16 days period instead of daily base.
 Unlike snow scene that 
 tag feature is very discriminative, according 
@@ -298,136 +437,137 @@ The satellite ground truth, instead, is limited to cloud coverage and other sens
 
 
 
-\begin{figure}[th]
-{\tiny{
-\begin{center}
-\begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/6.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/7.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/8.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/9.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/10.jpg} \\
-\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
-\\[1pt]
-\hline
-\\[1pt]
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/6.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/7.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/8.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/9.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/10.jpg} \\
-\multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
-\end{tabular}
-\end{center}
-}}
-\vspace{-6pt}
-\caption{Random images from our hand-labeled dataset. Public sharing images are various in quality, contents, illumination and view angle.
-Negative images like winter trees without leaves, or indoor images capturing a photo of forest are more confusing.}
-\label{fig:dataset}
-\end{figure}
-
-\begin{table}\centering
-\caption {\textbf{Results for our visual models for vegetation.}}
-\label{tab:veg_img_classifier} 
-\tiny
-\begin{tabular}{@{}cr@{}}\toprule
-Visual feature &  Accuracy\\\midrule
-Random Baseline & 50.00\%\\
-Color SIFT & 78.10\%\\
-Color GIST & 82.58\% \\
-SIFT and GIST& 85.9\% \\
-CNN\% &  88.0\%\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.45\textwidth]{figure/curvevege.jpg}
-\end{center}
-%}}
-\vspace{-6pt}
-\addvspace{2mm}
-\caption{Precision and recall curve of vegetation prediction in continental scale.}
-\label{fig:curvevege}
-\vspace{-6pt}
-\end{figure}
-\addvspace{5mm}
-
-\begin{figure}[th]
-{\tiny{
-\begin{center}
-\begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/6.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/7.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/8.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/9.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/10.jpg} \\
+%\begin{figure}[th!]
+%{\tiny{
+%\begin{center}
+%\begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/6.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/7.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/8.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/9.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetposi/10.jpg} \\
 %\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
-\\[-6pt]
-\hline
-\\[-6pt]
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/16.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/17.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/18.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/19.jpg} &
-\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/20.jpg} \\
+%\\[1pt]
+%\hline
+%\\[1pt]
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/6.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/7.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/8.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/9.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/datasetnega/10.jpg} \\
 %\multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
-\end{tabular}
-\end{center}
-}}
-\vspace{-6pt}
-\caption{In vegetation detection over North America in 2009 and 2010, among all false positive bins, there are 47 images that are predicted as greenery. And these images are the reason these bins are predicted as green. Here are some random selected examples of the green images.}
-\label{fig:falseposi}
-\vspace{-6pt}
-\end{figure}
-
-% bar plot of 2 places
-\begin{figure}
-%{\tiny{
-\begin{center}
-\begin{tabular}{ccc}
-\includegraphics[width=0.14\textwidth]{bar/8560.jpg} &
-\includegraphics[width=0.14\textwidth]{bar/8561.jpg} &
-\includegraphics[width=0.14\textwidth]{bar/8881.jpg} \\
-\includegraphics[width=0.14\textwidth]{bar/8911.jpg} &
-\includegraphics[width=0.14\textwidth]{bar/9705.jpg} &
-\includegraphics[width=0.14\textwidth]{bar/10816.jpg} \\
-%(a) & (b)\\
-\\
-\end{tabular}
-\end{center}
+%\end{tabular}
+%\end{center}
 %}}
-\vspace{-24pt}
-\caption{Yellow bars show non-greenery at that time. Blue bars represent greenery. Prediction results on top shows 6 random places comparing to satellite ground truth. The ground truth on the bottom tends to disappear when leaves are turning yellow or green.}
-\label{fig:placeinbar}
-\vspace{-12pt}
-\end{figure}
-
-\begin{figure}
+%\vspace{-6pt}
+%\caption{Random images from our hand-labeled dataset. Public sharing images are various in quality, contents, illumination and view angle.
+%Negative images like winter trees without leaves, or indoor images capturing a photo of forest are more confusing.}
+%\label{fig:dataset}
+%\end{figure}
+%
+%\begin{table}[th!]
+%\centering
+%\caption {\textbf{Results for our visual models for vegetation.}}
+%\label{tab:veg_img_classifier} 
+%\tiny
+%\begin{tabular}{@{}cr@{}}\toprule
+%Visual feature &  Accuracy\\\midrule
+%Random Baseline & 50.00\%\\
+%Color SIFT & 78.10\%\\
+%Color GIST & 82.58\% \\
+%SIFT and GIST& 85.90\% \\
+%CNN\% &  88.00\%\\
+%\bottomrule
+%\end{tabular}
+%\end{table}
+%
+%\begin{figure}[th!]
+%\begin{center}
+%\includegraphics[width=0.45\textwidth]{figure/curvevege.jpg}
+%\end{center}
+%%}}
+%\vspace{-6pt}
+%\addvspace{2mm}
+%\caption{Precision and recall curve of vegetation prediction in continental scale.}
+%\label{fig:curvevege}
+%\vspace{-6pt}
+%\end{figure}
+%\addvspace{5mm}
+%
+%\begin{figure}[th!]
 %{\tiny{
-\begin{center}
-\begin{tabular}{cccc}
-\includegraphics[width=0.10\textwidth]{map/72.png} &
-\includegraphics[width=0.10\textwidth]{map/77.png} &
-\includegraphics[width=0.10\textwidth]{map/78.png} &
-%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
-\includegraphics[width=0.10\textwidth]{map/79.png}  \\
-Mar, 6th&May, 25th&Jun, 10th&Jun, 26th\\
-\includegraphics[width=0.10\textwidth]{map/82.png} &
-\includegraphics[width=0.10\textwidth]{map/83.png} &
-\includegraphics[width=0.10\textwidth]{map/84.png} &
-%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
-\includegraphics[width=0.10\textwidth]{map/91.png}  \\
-Aug, 13th&Aug, 29th&Sep, 14th&Dec 19th\\
-\\
-\end{tabular}
-\end{center}
+%\begin{center}
+%\begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/6.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/7.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/8.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/9.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/10.jpg} \\
+%%\multicolumn{5}{c}{(a) Random positive images in vegetation dataset} \\ 
+%\\[-6pt]
+%\hline
+%\\[-6pt]
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/16.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/17.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/18.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/19.jpg} &
+%\includegraphics[width=0.06\textwidth, height=0.35in]{imggrid/falseposi/20.jpg} \\
+%%\multicolumn{5}{c}{(b) Random negative images in vegetation dataset} \\
+%\end{tabular}
+%\end{center}
 %}}
-\vspace{-24pt}
-\caption{%On two 16-days time period, end of August on the left and during Christmas on the right, we show the confusion matrix map here. Orange bins are true positive; yellow bins are false negative; blue bins are false positive; and black bins are true negative.
-We use prediction results to recreate vegetation coverage maps for each 16-days period. There are 8 maps picked in 2010. The dates under each map are the starting date of each 16-days period.
-Orange bins represent true positive; blue bins are false positives; yellow bins are true negatives and black bins are false negatives. }
-\label{fig:map}
-\vspace{-12pt}
-\end{figure}
+%\vspace{-6pt}
+%\caption{In vegetation detection over North America in 2009 and 2010, among all false positive bins, there are 47 images that are predicted as greenery. And these images are the reason these bins are predicted as green. Here are some random selected examples of the green images.}
+%\label{fig:falseposi}
+%\vspace{-6pt}
+%\end{figure}
+%
+%% bar plot of 2 places
+%\begin{figure}[th!]
+%%{\tiny{
+%\begin{center}
+%\begin{tabular}{ccc}
+%\includegraphics[width=0.14\textwidth]{bar/8560.jpg} &
+%\includegraphics[width=0.14\textwidth]{bar/8561.jpg} &
+%\includegraphics[width=0.14\textwidth]{bar/8881.jpg} \\
+%\includegraphics[width=0.14\textwidth]{bar/8911.jpg} &
+%\includegraphics[width=0.14\textwidth]{bar/9705.jpg} &
+%\includegraphics[width=0.14\textwidth]{bar/10816.jpg} \\
+%%(a) & (b)\\
+%\\
+%\end{tabular}
+%\end{center}
+%%}}
+%\vspace{-24pt}
+%\caption{Yellow bars show non-greenery at that time. Blue bars represent greenery. Prediction results on top shows 6 random places comparing to satellite ground truth. The ground truth on the bottom tends to disappear when leaves are turning yellow or green.}
+%\label{fig:placeinbar}
+%\vspace{-12pt}
+%\end{figure}
+%
+%\begin{figure}[th!]
+%%{\tiny{
+%\begin{center}
+%\begin{tabular}{cccc}
+%\includegraphics[width=0.10\textwidth]{map/72.png} &
+%\includegraphics[width=0.10\textwidth]{map/77.png} &
+%\includegraphics[width=0.10\textwidth]{map/78.png} &
+%%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
+%\includegraphics[width=0.10\textwidth]{map/79.png}  \\
+%Mar, 6th&May, 25th&Jun, 10th&Jun, 26th\\
+%\includegraphics[width=0.10\textwidth]{map/82.png} &
+%\includegraphics[width=0.10\textwidth]{map/83.png} &
+%\includegraphics[width=0.10\textwidth]{map/84.png} &
+%%\includegraphics[width=0.5\textwidth,height=1.4in,clip,trim=0 0.5in 0in 0.6in]{plots/chicago_noaa_vs_prediction_prev_3.png} 
+%\includegraphics[width=0.10\textwidth]{map/91.png}  \\
+%Aug, 13th&Aug, 29th&Sep, 14th&Dec 19th\\
+%\\
+%\end{tabular}
+%\end{center}
+%%}}
+%\vspace{-24pt}
+%\caption{%On two 16-days time period, end of August on the left and during Christmas on the right, we show the confusion matrix map here. Orange bins are true positive; yellow bins are false negative; blue bins are false positive; and black bins are true negative.
+%We use prediction results to recreate vegetation coverage maps for each 16-days period. There are 8 maps picked in 2010. The dates under each map are the starting date of each 16-days period.
+%Orange bins represent true positive; blue bins are false positives; yellow bins are true negatives and black bins are false negatives. }
+%\label{fig:map}
+%\vspace{-12pt}
+%\end{figure}
