@@ -1,7 +1,7 @@
 \section{Introduction}
 
-Monitoring the meteorology and vegetation phenomenon is the cornerstone and challenge of ecology and biology research. Expensive satellite images give large scale data but struggle with cloud cover, 
-atmospheric conditions and fine-grained localization such as flower species distribution, human interaction with nature,
+Monitoring the meteorology and vegetation phenomenon is the cornerstone and key challenge of ecology and biology research. Expensive satellite images give large scale data but are limited by cloud cover, 
+atmospheric conditions, struggle with fine-grained localization such as flower species distribution and are not applicable on observing human interaction with nature; 
 % and direct targeting of them, 
 % \cite{China tests anti-satellite weapon, unnerving U.S., Pentagon is confident missile hit satellite tank}
 % need new or more deficiency of satellites
@@ -40,8 +40,8 @@ and recently to computer vision researches directly deriving various information
  temperature~\cite{glasner2015hot}, dynamic status of cloud~\cite{murdock}, snow coverage on mountain peak~\cite{fedorov2015snowwatch, fedorov2014snow}.
 %\fxnote{cloud is fixed, cite{temperature, cloud, mountain peak}} 
 In this paper, we test the feasibility of leveraging these noisy and biased images as a new 
-approach to observe nature. We study 2 particular phenomena, snowfall and vegetation 
-coverage as they are fundamental topic in ecology and biology study, have relatively 
+source to observe nature. We study 2 particular phenomena, snowfall and vegetation 
+coverage as they are fundamental topics in ecology and biology study, have relatively 
 distinct appearance to recognize, have a good chance to appear in social media, 
 and also have satellite maps available to serve as ground truth. Our approach is 
 illustrated in Figure \ref{fig:overview}. 
@@ -49,12 +49,12 @@ illustrated in Figure \ref{fig:overview}.
 First, we collect a large hand-labeled data set of the existence or absence of ecology phenomena. 
 Then, we train a classifier for each phenomenon by combining its most discriminative visual 
 features and by using deep learning features. 
-Finally, we collect 12 million images from entire North America over 2 years, make prediction 
-on geo and temporal scale by aggregating this visual evidence.
+Finally, we collect 12 million images from entire North America over 4 years, make prediction 
+on geo and temporal scale by aggregating visual evidence.
 
 Inspried by an earlier work~\cite{ecology2012www} 
 %\fxnote{ Fixed: cite{www}} 
-analyzing ecology phenomenon from image tags only. We apply a new approach 
+analyzing ecology phenomenon from image tags only. We apply a new approach by 
 understanding visual content of images, and run experiments on the exact same 
 data set to study how vision techniques could help in social media data mining 
 compared to using textual data alone. Also, to our best knowledge, among all the 
@@ -65,7 +65,8 @@ providing continental scale quantitative performance evaluation.
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.7]{figure/flowchartWevaluation.png}
-\caption{Overview of our approach to apply image classifiers on large scale images and make prediction by aggregating these visual evidence.}
+\caption{Overview of our approach. We train image classifiers(in blue) on large scale images. And by applying it to training images in 2007-2008, 
+we train a likelihood model(in green) and finally make prediction by aggregating these visual evidence.}
 % \fxnote{first classifier, then prediction}
 \label{fig:overview}
 \end{figure}
