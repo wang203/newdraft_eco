@@ -3,3 +3,5 @@
 *.out
 *.bbl
 *.blg
+*.aux
+*.synctex.gz
