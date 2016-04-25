@@ -1,18 +1,15 @@
 \begin{thebibliography}{10}
 
-\bibitem{facebookstatistics}
-top-15-valuable-facebook-statistics.
-\newblock http://www7.ncdc.noaa.gov/IPS/cd/cd.html.
-
 \bibitem{bollen11twitter}
 J.~Bollen, H.~Mao, and X.-J. Zeng.
 \newblock Twitter mood predicts the stock market.
 \newblock {\em Journal of Computational Science}, 2(1):1--8, 2011.
 
 \bibitem{douze2009evaluation}
-M.~Douze, H.~Jegou, H.~Sandhawalia, L.~Amsaleg, and C.~Schmid.
+M.~Douze, H.~J{\'e}gou, H.~Sandhawalia, L.~Amsaleg, and C.~Schmid.
 \newblock Evaluation of gist descriptors for web-scale image search.
-\newblock In {\em ICIVR}, 2009.
+\newblock In {\em Proceedings of the ACM International Conference on Image and
+  Video Retrieval}, page~19. ACM, 2009.
 
 \bibitem{fedorov2015snowwatch}
 R.~Fedorov, P.~Fraternali, C.~Pasini, and M.~Tagliasacchi.
@@ -25,6 +22,11 @@ R.~Fedorov, P.~Fraternali, and M.~Tagliasacchi.
 \newblock Snow phenomena modeling through online public media.
 \newblock In {\em Image Processing (ICIP), 2014 IEEE International Conference
   on}, pages 2174--2176. IEEE, 2014.
+
+\bibitem{ginsberg09flu}
+J.~Ginsberg, M.~Mohebbi, R.~Patel, L.~Brammer, M.~Smolinski, and L.~Brilliant.
+\newblock Detecting influenza epidemics using search engine query data.
+\newblock {\em Nature}, 457:1012--1014, 2009.
 
 \bibitem{glasner2015hot}
 D.~Glasner, P.~Fua, T.~Zickler, and L.~Zelnik-Manor.
@@ -45,12 +47,31 @@ P.-Y. Laffont, Z.~Ren, X.~Tao, C.~Qian, and J.~Hays.
   outdoor scenes.
 \newblock {\em ACM Transactions on Graphics (TOG)}, 33(4):149, 2014.
 
-\bibitem{li2015celebritynet}
-L.-J. Li, D.~A. Shamma, X.~Kong, S.~Jafarpour, R.~Van~Zwol, and X.~Wang.
-\newblock Celebritynet: A social network constructed from large-scale online
-  celebrity images.
-\newblock {\em ACM Transactions on Multimedia Computing, Communications, and
-  Applications (TOMM)}, 12(1):3, 2015.
+\bibitem{lazer2014parable}
+D.~Lazer, R.~Kennedy, G.~King, and A.~Vespignani.
+\newblock The parable of google flu: traps in big data analysis.
+\newblock {\em Science}, 343(14 March), 2014.
+
+\bibitem{geoinformative2015wacv}
+S.~Lee, H.~Zhang, and D.~Crandall.
+\newblock Predicting geo-informative attributes in large-scale image
+  collections using convolutional neural networks.
+\newblock In {\em IEEE Winter Conference on Applications of Computer Vision},
+  2015.
+
+\bibitem{Leung:2010wa}
+D.~Leung and S.~Newsam.
+\newblock {Proximate Sensing: Inferring What-Is-Where From Georeferenced Photo
+  Collections}.
+\newblock In {\em In Proc. IEEE Conference on Computer Vision and Pattern
+  Recognition}. Citeseer, 2010.
+
+\bibitem{li2015smog}
+Y.~Li, J.~Huang, and J.~Luo.
+\newblock Using user generated online photos to estimate and monitor air
+  pollution in major cities.
+\newblock In {\em ACM International Conference on Internet Multimedia Computing
+  and Service}, 2015.
 
 \bibitem{lowe1999object}
 D.~G. Lowe.
@@ -58,10 +79,11 @@ D.~G. Lowe.
 \newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
   international conference on}, volume~2, pages 1150--1157. Ieee, 1999.
 
-\bibitem{murdock}
+\bibitem{murdock2013webcam2satellite}
 C.~Murdock, N.~Jacobs, and R.~Pless.
-\newblock {Webcam2Satellite}: Estimating cloud maps from webcam imagery.
-\newblock In {\em WACV}, 2013.
+\newblock Webcam2satellite: Estimating cloud maps from webcam imagery.
+\newblock In {\em Applications of Computer Vision (WACV), 2013 IEEE Workshop
+  on}, pages 214--221. IEEE, 2013.
 
 \bibitem{murdock2015building}
 C.~Murdock, N.~Jacobs, and R.~Pless.
@@ -69,25 +91,15 @@ C.~Murdock, N.~Jacobs, and R.~Pless.
 \newblock In {\em Proceedings of the IEEE International Conference on Computer
   Vision}, pages 684--692, 2015.
 
-\bibitem{oba2014towards}
-H.~Oba, M.~Hirota, R.~Chbeir, H.~Ishikawa, and S.~Yokoyama.
-\newblock Towards better land cover classification using geo-tagged
-  photographs.
-\newblock In {\em Multimedia (ISM), 2014 IEEE International Symposium on},
-  pages 320--327. IEEE, 2014.
+\bibitem{citizensci}
+NEON.
+\newblock http://budburst.org/.
 
 \bibitem{oliva2001modeling}
 A.~Oliva and A.~Torralba.
 \newblock Modeling the shape of the scene: A holistic representation of the
   spatial envelope.
-\newblock {\em IJCV}, 42(3):145--175, 2001.
-
-\bibitem{omori2014can}
-M.~Omori, M.~Hirota, H.~Ishikawa, and S.~Yokoyama.
-\newblock Can geo-tags on flickr draw coastlines?
-\newblock In {\em Proceedings of the 22nd ACM SIGSPATIAL International
-  Conference on Advances in Geographic Information Systems}, pages 425--428.
-  ACM, 2014.
+\newblock {\em International journal of computer vision}, 42(3):145--175, 2001.
 
 \bibitem{porzi2015predicting}
 L.~Porzi, S.~Rota~Bul{\`o}, B.~Lepri, and E.~Ricci.
@@ -122,12 +134,14 @@ Q.~You, L.~Cao, Y.~Cong, X.~Zhang, and J.~Luo.
 \bibitem{ecology2012www}
 H.~Zhang, M.~Korayem, D.~Crandall, and G.~LeBuhn.
 \newblock {Mining Photo-sharing Websites to Study Ecological Phenomena}.
-\newblock In {\em WWW}, 2012.
+\newblock In {\em Proceedings of the 21st international conference on World
+  Wide Web}, pages 749--758. ACM, 2012.
 
 \bibitem{zhou2014recognizing}
 B.~Zhou, L.~Liu, A.~Oliva, and A.~Torralba.
 \newblock Recognizing city identity via attribute analysis of geo-tagged
   images.
-\newblock In {\em Computer Vision--ECCV 2014}, pages 519--534. Springer, 2014.
+\newblock In {\em Proceedings of the European Conference on Computer Vision
+  ({ECCV})}, pages 519--534. Springer, 2014.
 
 \end{thebibliography}

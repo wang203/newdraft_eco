@@ -6,47 +6,51 @@ Repeated entry---line 88 of file eco.bib
  : @article{laffont2014transient
  :                              ,
 I'm skipping whatever remains of this entry
-Warning--to sort, need author or key in facebookstatistics
+Repeated entry---line 235 of file eco.bib
+ : @article{ginsberg09flu
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "murdock"
 Warning--empty school in vsecerov2015analysis
-You've used 22 entries,
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            615 strings with 7882 characters,
-and the built_in function-call counts, 9085 in all, are:
-= -- 900
-> -- 447
-< -- 11
-+ -- 177
-- -- 154
-* -- 617
-:= -- 1414
-add.period$ -- 72
-call.type$ -- 22
-change.case$ -- 142
+            631 strings with 8348 characters,
+and the built_in function-call counts, 9770 in all, are:
+= -- 973
+> -- 474
+< -- 12
++ -- 188
+- -- 162
+* -- 653
+:= -- 1533
+add.period$ -- 80
+call.type$ -- 24
+change.case$ -- 151
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 372
-empty$ -- 701
-format.name$ -- 154
-if$ -- 1979
+cite$ -- 25
+duplicate$ -- 401
+empty$ -- 756
+format.name$ -- 162
+if$ -- 2131
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 20
-newline$ -- 112
-num.names$ -- 42
-pop$ -- 177
+int.to.str$ -- 24
+missing$ -- 22
+newline$ -- 122
+num.names$ -- 48
+pop$ -- 189
 preamble$ -- 1
-purify$ -- 121
+purify$ -- 129
 quote$ -- 0
-skip$ -- 284
+skip$ -- 302
 stack$ -- 0
-substring$ -- 540
-swap$ -- 133
-text.length$ -- 11
+substring$ -- 579
+swap$ -- 141
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
-warning$ -- 2
-while$ -- 79
-width$ -- 24
-write$ -- 243
-(There was 1 error message)
+type$ -- 96
+warning$ -- 1
+while$ -- 86
+width$ -- 26
+write$ -- 267
+(There were 2 error messages)
