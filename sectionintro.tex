@@ -1,70 +1,115 @@
 \section{Introduction}
 
-Monitoring the meteorology and vegetation phenomenon is the cornerstone and key challenge of ecology and biology research. Expensive satellite images give large scale data but are limited by cloud cover, 
-atmospheric conditions, struggle with fine-grained localization such as flower species distribution and are not applicable on observing human interaction with nature; 
-% and direct targeting of them, 
-% \cite{China tests anti-satellite weapon, unnerving U.S., Pentagon is confident missile hit satellite tank}
-% need new or more deficiency of satellites
-while citizen science provides high quality data but is also costly and is very difficult to practice over large scale areas.
-The enormous popularity of photo-sharing website collects images in large spatial scale, from under clouds and in close focus (compare to aerial surveillance), 
-moreover, they are freely accessible to the public.
-The more than 300 million images uploaded to social media every day ~\cite{facebookstatistics}
- potentially contain not only human activities, but also outdoor ecology and biology 
-information intentionally and incidentally as shown in Figure ~\ref{fig:flickrexp}.
-% !! extend
+Monitoring the state of the natural world is a key challenge of
+ecological and biological research, since predicting future changes
+depends on accurate observations of the present. Satellites give
+observations at large scale but can only be applied to phenomena that
+can be seen from far above, and are limited by cloud cover and other
+atmospheric conditions.  Citizen science projects~\cite{something} can
+produce quality data, but require significant incentives to encourage
+participation over large scale areas, and clever designs to derive
+accurate data from untrained observers.  A potentially rich
+alternative is to mine publicly-available social media for
+observations relevant to natural world, in effect turning the billions
+of social media users into citizen scientists without any explicit
+actions on their part.  This idea is motivated by the large amount of
+work that has  mined social media  to predict and
+observe properties of the real world, including the stock
+market~\cite{bollen11twitter},
+elections~\cite{you2015multifacetedelections}, tourism
+activity~\cite{wood2013usingtourism}, and so on.
+
+However, most of this work has used textual data like Facebook posts
+and Twitter feeds.  Social images are potentially a richer source of
+information because they often include incidental evidence about the
+natural world (Figure~\ref{fig:flickrexp}).  In addition, they record
+visual documentation that can later be analyzed, inspected, and
+validated; the danger of relying on text analysis and the importance
+of validation was recently recently illustrated by the case of Google
+Flu, which initially showed great promise in monitoring the spread of
+influenza by mining search engine queries~\cite{ginsberg09flu}, but
+was later found to be largely inaccurate~\cite{lazer2014parable}.
+Of course, a key challenge in mining images is how to extract useful
+semantic information.
 
 \begin{figure}[t]
 {\tiny{
 \begin{center}
 \begin{tabular}{@{}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}c@{\,\,\,}}
-\includegraphics[width=0.05\textwidth, height=0.3in]{image/citysnow.jpg} &
-\includegraphics[width=0.05\textwidth, height=0.3in]{image/citysnow2.jpg} &
-\includegraphics[width=0.05\textwidth, height=0.3in]{image/dogsnow.jpg} &
-\includegraphics[width=0.05\textwidth, height=0.3in]{image/humansnow.jpg} &
-\includegraphics[width=0.05\textwidth, height=0.3in]{image/intentiongreen.jpg} &
-\includegraphics[width=0.05\textwidth, height=0.3in]{image/waterfallgreen.jpg} &
-\includegraphics[width=0.05\textwidth, height=0.3in]{image/dogtree.jpg} &
-\includegraphics[width=0.05\textwidth, height=0.3in]{image/humantree.jpg} \\
+%\includegraphics[width=0.12\textwidth]{image/citysnow.jpg} &
+%\includegraphics[width=0.1\textwidth]{image/citysnow2.jpg} &
+\includegraphics[width=0.15\textwidth]{image/dogsnow.jpg} &
+%\includegraphics[width=0.1\textwidth]{image/humansnow.jpg} \\
+\includegraphics[width=0.15\textwidth]{image/intentiongreen.jpg} &
+%\includegraphics[width=0.1\textwidth]{image/waterfallgreen.jpg} &
+%\includegraphics[width=0.12\textwidth,trim=0 0 0 cm,clip]{image/dogtree.jpg} &
+\includegraphics[width=0.15\textwidth]{image/humantree.jpg} \\
 \end{tabular}
 \end{center}
 }}
-\vspace{-18pt}
-\caption{Flickr image examples capture snow and greenery evidence on purpose and as background.}
+\vspace{-12pt}
+\caption{Many social media images capture information about the state of the natural world, both intentionally or incidentally.}
 \label{fig:flickrexp}
 \vspace{-12pt}
 \end{figure}
 
 
-The idea of reproducing satellite maps has become more and more interesting to scientists applying 
-textual mining on~\cite{bollen11twitter,ecology2012www,you2015multifacetedelections,wood2013usingtourism} 
-%\fxnote{fixed,  cite{stock, ecology, election, tourists} }, 
-and recently to computer vision researches directly deriving various information directly from visual contents such as
- temperature~\cite{glasner2015hot}, dynamic status of cloud~\cite{murdock}, snow coverage on mountain peak~\cite{fedorov2015snowwatch, fedorov2014snow}.
-%\fxnote{cloud is fixed, cite{temperature, cloud, mountain peak}} 
-In this paper, we test the feasibility of leveraging these noisy and biased images as a new 
-source to observe nature. We study 2 particular phenomena, snowfall and vegetation 
-coverage as they are fundamental topics in ecology and biology study, have relatively 
-distinct appearance to recognize, have a good chance to appear in social media, 
-and also have satellite maps available to serve as ground truth. Our approach is 
-illustrated in Figure \ref{fig:overview}. 
-% new source of monitoring ecology information
-First, we collect a large hand-labeled data set of the existence or absence of ecology phenomena. 
-Then, we train a classifier for each phenomenon by combining its most discriminative visual 
-features and by using deep learning features. 
-Finally, we collect 12 million images from entire North America over 4 years, make prediction 
-on geo and temporal scale by aggregating visual evidence.
+A few papers have begun to apply computer images for environmental
+properties, including temperature~\cite{glasner2015hot}, cloud
+cover~\cite{murdock}, and smog conditions~\cite{li2015smog}. Most of
+these papers use video data (e.g.\ from static webcams) so that visual
+changes over time can be easily detected. Video camera feeds are
+potentially very useful for studying longitudinal changes across time
+in one particular place, but are limited to studying places where
+cameras have been installed. Social photo sharing websites potentially
+represent a complementary source of data, that give much greater
+spatial coverage: whenever a user takes a photo at a particular place
+and time and uploads it to Flickr, they are contributing a potentially
+useful observation.
 
-Inspried by an earlier work~\cite{ecology2012www} 
-%\fxnote{ Fixed: cite{www}} 
-analyzing ecology phenomenon from image tags only. We apply a new approach by 
-understanding visual content of images, and run experiments on the exact same 
-data set to study how vision techniques could help in social media data mining 
-compared to using textual data alone. Also, to our best knowledge, among all the 
-research works performing social sensing with image data, this is the first one 
-providing continental scale quantitative performance evaluation.
+In this paper, we test the feasibility of leveraging these noisy and
+biased images as a new source to observe nature, using modern deep
+learning-based computer vision algorithms to recognize image content
+automatically.  As a case study, we investigate two particular
+phenomena, snowfall and vegetation coverage, since they are important
+properties of the environment, they are relatively easy to recognize,
+occur frequently in social images, and have satellite maps available
+to serve as ground truth. This choice was also inspired by Fedorov et
+al~\cite{fedorov2015snowwatch,fedorov2014snow}, who use video analysis
+to monitor snow fall on mountains, and Zhang et
+al~\cite{ecology2012www}, who predict snowfall from image collections
+but using text tag analysis.  We first collect image data labeled to
+reflect the presence of absence of ecology phenomena, and train
+classifiers using Convolutional Neural Networks to recognize these
+ecology phenomena in individual images. Of course, these classifiers
+are noisy, and social image data is noisy also, with many inaccurate
+timestamps and geo-tags.  We thus train an additional classifier that
+examines all images taken at a given place and time, runs the image
+classifier on each one, and then predicts if the phenomena actually
+occured there and then.  Finally, we evaluate at a large scale,
+training and testing on millions of Flickr images and quantiatively
+evaluating the performance at hundreds of thousands of places and
+times.
+
+%% Inspried by an earlier work~\cite{ecology2012www} 
+%% %\fxnote{ Fixed: cite{www}} 
+%% analyzing ecology phenomenon from image tags only. We apply a new approach by 
+%% understanding visual content of images, and run experiments on the exact same 
+%% data set to study how vision techniques could help in social media data mining 
+%% compared to using textual data alone. Also, to our best knowledge, among all the 
+%% research works performing social sensing with image data, this is the first one 
+%% providing continental scale quantitative performance evaluation.
 
 
-\begin{figure}[h!]
+
+
+
+
+
+
+
+
+\begin{figure}[t]
 \centering
 \includegraphics[scale=0.7]{figure/flowchartWevaluation.png}
 \vspace{-12pt}
