@@ -5,7 +5,7 @@ ecological and biological research, since predicting future changes
 depends on accurate observations of the present. Satellites give
 observations at large scale but can only be applied to phenomena that
 can be seen from far above, and are limited by cloud cover and other
-atmospheric conditions.  Citizen science projects~\cite{citizensci} can
+atmospheric conditions.  Citizen science projects~\cite{citizensci,lostladybug} can
 produce quality data, but require significant incentives to encourage
 participation over large scale areas, and clever designs to derive
 accurate data from untrained observers.  A potentially rich
@@ -25,7 +25,7 @@ information because they often include incidental evidence about the
 natural world (Figure~\ref{fig:flickrexp}).  In addition, they record
 visual documentation that can later be analyzed, inspected, and
 validated; the danger of relying on text analysis and the importance
-of validation was recently recently illustrated by the case of Google
+of validation was recently illustrated by the case of Google
 Flu, which initially showed great promise in monitoring the spread of
 influenza by mining search engine queries~\cite{ginsberg09flu}, but
 was later found to be largely inaccurate~\cite{lazer2014parable}.
@@ -72,14 +72,14 @@ biased images as a new source to observe nature, using modern deep
 learning-based computer vision algorithms to recognize image content
 automatically.  As a case study, we investigate two particular
 phenomena, snowfall and vegetation coverage, since they are important
-properties of the environment, they are relatively easy to recognize,
+properties of the environment. They are relatively easy to recognize,
 occur frequently in social images, and have satellite maps available
 to serve as ground truth. This choice was also inspired by Fedorov et
 al~\cite{fedorov2015snowwatch,fedorov2014snow}, who use video analysis
 to monitor snow fall on mountains, and Zhang et
 al~\cite{ecology2012www}, who predict snowfall from image collections
 but using text tag analysis.  We first collect image data labeled to
-reflect the presence of absence of ecology phenomena, and train
+reflect the presence or absence of ecology phenomena, and train
 classifiers using Convolutional Neural Networks to recognize these
 ecology phenomena in individual images. Of course, these classifiers
 are noisy, and social image data is noisy also, with many inaccurate
