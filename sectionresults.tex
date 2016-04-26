@@ -1,28 +1,80 @@
-\section{experiments and results}
+\section{Estimating environmental properties from social images}
 
-In this paper, we propose an effective system to estimate the presence or absence 
-of a given ecology phenomenon (like green leaf plants) 
-from visual contents of public-shared photographs. First, we employ the state-of-the-art 
-computer vision technique to detect the target phenomenon. Then according to the visual evidence 
-and the corresponding timestamp and geo-tag of each image, we adopt the likelihood model in ~\cite{ecology2012www}
-aggregating the large scale, imperfect information to reconstruct the satellite maps.
+Our research question in this paper is to investigate the extent to
+which modern scene classification could be used to accurately predict
+environmental conditions at a given time and place, given a collection
+of social images taken then and there. We investigate two specific
+types of conditions: (1) whether there was snow on the ground, and (2)
+whether there is green vegetation. Both of these environmental 
+properties change over time and over geo-spatial location on Earth.
 
-In Scene classification, we also employ the current state-of-the-art algorithm, 
-the Convolutional Neural Network (CNN) pre-trained on ImageNet dataset. 
-The key idea behind this approach is that instead of selecting and combining hand designed features 
-with limited parameters to fit each recognition task, it learns hierarchical image feature directly 
-for target objects.
-We fine-tune it with our 
-hand-labeled dataset for each experiment case and further improve the performance illustrated below.
+%\subsection{Data}
+
+We collected a dataset of ??? million Flickr images
+geo-tagged within North America and time-stamped with a year from 2007
+through 2014. Throughout our experiments, we used the 2007--2010 data
+for training and reserved 2011--2014 as a separate test set. We
+removed photos with inaccurate geo-tags (thresholding at 12 on
+Flickr's GPS precision score), but otherwise did not filter images in
+any way, so our set includes much noisy and confusing image content
+(e.g. indoor images containing no possible environmental evidence).
+For the ground truth for training and testing, we used public data
+from NASA's Terra satellite~\cite{terra}, which gives daily snow
+coverage maps for all of North America gridded into 0.1$^\circ \times$
+0.1$^\circ$ bins, and bi-weekly vegetation coverage maps gridded into
+1$^\circ \times$ 1$^\circ$ degree bins. Unfortunately, this data is
+not complete because the satellite cannot make observations through
+clouds. Thus for each bin, the data records the percentage of the bin
+that was visible, and the percentage of the visible area that was
+covered by snow. To identify bins with reliable ground truth, we take
+the product of these two numbers and count those under 0.1 as non-snow
+bins, and over 0.9 as snow bins (this is similar to what was done
+in~\cite{ecology2012www} except that they coarsened all data to 1
+degree bins, and used unspecified separate thresholds on visibility and
+coverage).  HOW MANY SNOW AND NON SNOW BINS? Similar preprocessing
+was done for vegetation.
+
+%\subsection{Image classification}
+
+The specific tasks we consider here is to decide, based only on the visual
+content of Flickr photos, whether there was snow and/or green vegetation
+on a given day and in a given spatial bin. To do this we require
+two key steps: deciding whether or not there is evidence of snow or greenery
+in any individual image, and then integrating this (very noisy) evidence across multiple
+images to estimate the actual real-world environmental state.
+
+\xhdr{Image classification.}  We tested a variety of features for
+scene classification, including color histograms, GIST, subsampled
+(``tiny'') images, bag-of-words with quantized SIFT features, and
+bag-of-words of Local Binary Patterns~\cite{XiaoHEOT10}, with Support
+Vector Machine classifiers with different kernels. We also tested
+Convolutional Neural Networks (CNNs), the current
+state-of-the-art technique in image
+classifcation~\cite{krizhevsky2012imagenet}, using the de facto
+standard process of initializing weights based on a network trained
+on ImageNet, and then fine-tuning using our training set.
+
+\xhdr{Aggregating evidence.} Of course, the classification results on
+individual images is not imperfect, and noise in geo-tags and
+time-stamps yields imperfect evidence even if it were. We combine
+classification results from multiple images taken at the same time and
+place in order to mitigate this problem, taking into account the image
+classifier's confidence in its decisions. In particular, for each
+temporal and spatial bin, we build a histogram of quantized confidence
+scores, recording how many of the photos were classified as snow and
+non-snow (or green and non-green) at 20 quantized confidence
+intervals. We then trained an SVM to estimate the actual environmental
+state from these histograms.
 
 
-We study two important ecology phenomena, for each time period and location, 
-whether there is snowfall and are there many plants with green leaves? We discuss the experimental setup 
-and the results and evaluation below.
+\section{Experimental Results}
 
-\subsection{Snow Case}
-\xhdr{Scene Classification}
-%We are using the same hand-labeled dataset as in ~\cite{wang2013observing}.
+We evaluated the accuracy of our techniques on inferring
+environmental properties using Flickr photos, with the satellite data described
+above as ground truth, for both snow and vegetation cover. We compared several
+different features, classifiers, and testing and training scenarios.
+
+\xhdr{Snow image classification.}
 Beyond combining visual features, 
 we build CNN visual model for our snow scene classification problem 
 by fine-tuning Imagenet pre-trained model with the 8000 training images labeled for snow scene~\cite{wang2013observing}. The best 
@@ -40,7 +92,6 @@ in many applications, it may not be necessary to correctly
 classify all images, but instead it is important to find some images that most likely contain snowy 
 scene.
 
-We now turn to present experimental results for estimating geo-temporal distributions of snowfall.
 
 \xhdr{Snow Prediction on Cities}
 To compare with existing results in ~\cite{wang2013observing} using tag based method,
@@ -172,8 +223,7 @@ City
 
 
 
-\subsection{Vegetation Case}
-
+\xhdr{Vegetation image classification.}
 Vegetation coverage is a more stable phenomenon, so we study this case in every 16 days period instead of daily base.
 Unlike snow scene that 
 tag feature is very discriminative, according 
@@ -263,42 +313,54 @@ not covered by enough vegetation according to satellite observation. Since resid
 to see any plants wherever people would go, there is a considerable chance to see green scene in photos, but when there are enough users 
 uploading images, we will still be able to distinguish the actual green and non-green area.
 
-While the satellite has ground truth for $87594$ bins in North America, our method predicts our method predicts $61602$ bins ($70.3\%$
- in quantity). Moreover, about $20\%$ of satellite ground truth locate in north Canada where the ecology system 
-is stable and very little human-environment interaction happens. Moreover, our data is from users in social media. 
-So our prediction focus on more populated locations or places people like to visit such as natural scenery.
+While the satellite has ground truth for $87594$ bins in North
+America, our method predicts our method predicts $61602$ bins
+($70.3\%$ in quantity). Moreover, about $20\%$ of satellite ground
+truth locate in north Canada where the ecology system is stable and
+very little human-environment interaction happens. Moreover, our data
+is from users in social media.  So our prediction focus on more
+populated locations or places people like to visit such as natural
+scenery.
 
-For evaluation purpose, we only evaluate the time and location both Flickr and Satellite have data in North America. The overall accuracy 
-of our method is $93.2\%$ comparing to the $86.6\%$ majority baseline. 
-The precision of green bins is $98.8\%$ and the precision of non-green bins is $68.2\%$. Recall of green bins is $93.3\%$
- and recall of non-green bins is $92.5\%$. In ~\cite{ecology2012www}, the performance of predicting vegetation coverage
-of tag
-feature is not going to improve the result of using visual evidence. Figure ~\ref{fig:curvevege} shows the precision 
-and recall curve of vegetation prediction in continental-scale.
+For evaluation purpose, we only evaluate the time and location both
+Flickr and Satellite have data in North America. The overall accuracy
+of our method is $93.2\%$ comparing to the $86.6\%$ majority baseline.
+The precision of green bins is $98.8\%$ and the precision of non-green
+bins is $68.2\%$. Recall of green bins is $93.3\%$ and recall of
+non-green bins is $92.5\%$. In ~\cite{ecology2012www}, the performance
+of predicting vegetation coverage of tag feature is not going to
+improve the result of using visual evidence. Figure
+~\ref{fig:curvevege} shows the precision and recall curve of
+vegetation prediction in continental-scale.
 
-Generally, almost all the false negative error is due to the sparseness of data. 
-While not enough images are collected at certain location during some time, 
-there is either no green image found or green images are too few compare to 
-the quantity of non-green images. On the other hand, false positive error is rare 
-(less than $1\%$). We checked resultes in 2007. There are 47 images in total classified as green 
-in false positive bins. And we manually checked that almost all of them are really green images. The 
-reason can be complex due to wrong GPS tag on Flickr data side or satellite issue on ground truth side.
-
-
-\xhdr{Performance at single place over time}
-For each single location, we can find out when exactly did the leaves turn yellow as well as when
-did the leaves turn back to green. 
-Figure ~\ref{fig:placeinbar} shows vegetation coverage of 6 places over 2009 and 2010. 
-Prediction results on top usually have more data available than ground truth on the bottom. 
-And we can see the ground truth is likely missing at the time when the leaves change color. 
+Generally, almost all the false negative error is due to the
+sparseness of data.  While not enough images are collected at certain
+location during some time, there is either no green image found or
+green images are too few compare to the quantity of non-green
+images. On the other hand, false positive error is rare (less than
+$1\%$). We checked resultes in 2007. There are 47 images in total
+classified as green in false positive bins. And we manually checked
+that almost all of them are really green images. The reason can be
+complex due to wrong GPS tag on Flickr data side or satellite issue on
+ground truth side.
 
 
+\xhdr{Performance at single place over time.} For each single location,
+we can find out when exactly did the leaves turn yellow as well as
+when did the leaves turn back to green.  Figure ~\ref{fig:placeinbar}
+shows vegetation coverage of 6 places over 2009 and 2010.  Prediction
+results on top usually have more data available than ground truth on
+the bottom.  And we can see the ground truth is likely missing at the
+time when the leaves change color.
 
-\xhdr{Single time over places}
-Sample maps are presented in figure ~\ref{fig:map}. These maps are visualization of the performance
-in North America.
-We use public sharing Flickr images suffering sparsity in locations, but are more likely taken from more populated or more popular locations. 
-The satellite ground truth, instead, is limited to unpredictable cloud coverage and other sensor precision issue.
+
+
+\xhdr{Single time over places.}  Sample maps are presented in figure
+~\ref{fig:map}. These maps are visualization of the performance in
+North America.  We use public sharing Flickr images suffering sparsity
+in locations, but are more likely taken from more populated or more
+popular locations.  The satellite ground truth, instead, is limited to
+unpredictable cloud coverage and other sensor precision issue.
 
 
 
